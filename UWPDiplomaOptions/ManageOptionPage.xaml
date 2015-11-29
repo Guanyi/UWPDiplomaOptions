@@ -1,0 +1,77 @@
+﻿<Page
+    x:Class="UWPDiplomaOptions.ManageOptionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPDiplomaOptions.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid Background="#0078D7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>   <!-- header -->
+            <RowDefinition Height="Auto"/> <!-- Table header row -->
+            <RowDefinition Height="Auto"/> <!-- Table-->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/> <!-- checkbox -->
+            <ColumnDefinition Width="2*"/> <!-- OptionId -->
+            <ColumnDefinition Width="5*"/> <!-- Title    -->
+            <ColumnDefinition Width="2*"/> <!-- IsActive -->
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="4" Orientation="Horizontal">
+            <Grid Width="853">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Check" HorizontalAlignment="Center" />
+                <TextBlock Grid.Column="1" Text="Id" HorizontalAlignment="Center" />
+                <TextBlock Grid.Column="2" Text="Title" HorizontalAlignment="Center" />
+                <TextBlock Grid.Column="3" Text="Is Active" HorizontalAlignment="Center" />
+            </Grid>
+        </StackPanel>
+
+        <ListView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" ItemsSource="{x:Bind Options}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Option">
+                    <Grid Background="Beige" Width="853"  HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                        <CheckBox Grid.Column="0" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" Text="{x:Bind OptionId}" FontSize="18.667" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text="{x:Bind Title}" FontSize="18.667" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="3" Text="{x:Bind IsActive}" FontSize="18.667" HorizontalAlignment="Center"/>
+                    </Grid >
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackPanel Grid.Row="3"  Grid.Column="2" Grid.ColumnSpan="3" Orientation="Horizontal">
+            <Grid Width="853">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Name="AddOption" Content="Add Option" Click="AddOption_Click"/>
+                <TextBox Grid.Column="1" Name="OptionTitle" PlaceholderText="Option Title" />
+                <ComboBox Grid.Column="2" Name="Active" SelectedIndex="0">
+                    <ComboBoxItem Content="Yes" Tag="1" />
+                    <ComboBoxItem Content="No" Tag="0" />
+                </ComboBox>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>

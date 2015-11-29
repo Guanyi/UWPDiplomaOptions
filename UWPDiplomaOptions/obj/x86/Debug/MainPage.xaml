@@ -13,6 +13,9 @@
             <Button x:ConnectionId='4' Name="BackButton" Content="Back"                          FontSize="26.667" Foreground="White" />
             <Button x:ConnectionId='5' Name="ForwardButton" Content="Forward"                             FontSize="26.667" Foreground="White"/>
             <Button x:ConnectionId='6' Name="LogOffButton" Content="Log Off"                             FontSize="26.667" Foreground="White"/>
+            <Button x:ConnectionId='7' Name="ManageOptionButton" Content="Manage Options" FontSize="26.667" Foreground="White"                                 />
+            <Button x:ConnectionId='8' Name="ManageYearTermButton" Content="Manage YearTerm" FontSize="26.667" Foreground="White"                                   />
+            <Button x:ConnectionId='9' Name="ManageUserRoleButton" Content="Manage User Role" FontSize="26.667" Foreground="White"                                   />
         </StackPanel>
         <Frame x:ConnectionId='1' Name="MainFrame"/>
         <TextBlock x:ConnectionId='2' Name="Footer" Text="© 2015 - Option Selector" HorizontalAlignment="Center" Foreground="White"/>

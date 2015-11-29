@@ -2,4 +2,8 @@ App.xbf
 HomePage.xbf
 LoginPage.xbf
 MainPage.xbf
+ManageChoicePage.xbf
+ManageOptionPage.xbf
+ManageUserRolePage.xbf
+ManageYearTermPage.xbf
 RegisterPage.xbf

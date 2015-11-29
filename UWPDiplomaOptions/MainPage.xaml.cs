@@ -53,5 +53,20 @@ namespace UWPDiplomaOptions
         {
 
         }
+
+        private void ManageOptionButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(ManageOptionPage));
+        }
+
+        private void ManageYearTermButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(ManageYearTermPage));
+        }
+
+        private void ManageUserRoleButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(ManageUserRolePage));
+        }
     }
 }

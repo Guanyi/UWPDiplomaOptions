@@ -108,6 +108,22 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ManageChoicePage.xaml.cs">
+      <DependentUpon>ManageChoicePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageOptionPage.xaml.cs">
+      <DependentUpon>ManageOptionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageUserRolePage.xaml.cs">
+      <DependentUpon>ManageUserRolePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageYearTermPage.xaml.cs">
+      <DependentUpon>ManageYearTermPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Choice.cs" />
+    <Compile Include="Models\Option.cs" />
+    <Compile Include="Models\UserRole.cs" />
+    <Compile Include="Models\YearTerm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
@@ -146,11 +162,28 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="ManageChoicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageOptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageUserRolePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageYearTermPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

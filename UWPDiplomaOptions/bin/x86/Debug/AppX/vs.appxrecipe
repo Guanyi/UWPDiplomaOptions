@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>e881960f-6656-40a5-a81d-234e03f2feee</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>4AE58861C5D0D30280F4B90DD9F10BC865BA5107EB8F5E96248D12475B0BFBDC</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>7234327F680051703B5AA4264826F5B9C6EA6B29ACE50D21C1C5CFFA70C14922</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>e881960f-6656-40a5-a81d-234e03f2feee_1.0.0.0_x86__1kgpfjepab3y0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>e881960f-6656-40a5-a81d-234e03f2feee_1kgpfjepab3y0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>e881960f-6656-40a5-a81d-234e03f2feee</RegisteredPackageID>
@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-29T00:48:35.720</Modified>
+      <Modified>2015-11-29T06:16:30.507</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -30,17 +30,9 @@
       <PackagePath>ApplicationInsights.config</PackagePath>
       <Modified>2015-11-24T20:59:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\background.jpg">
-      <PackagePath>Assets\background.jpg</PackagePath>
-      <Modified>2015-11-24T21:34:50.000</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-08-27T09:38:34.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\splash.png">
-      <PackagePath>Assets\splash.png</PackagePath>
-      <Modified>2015-11-24T22:04:10.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
@@ -77,7 +69,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\entrypoint\UWPDiplomaOptions.exe">
       <PackagePath>entrypoint\UWPDiplomaOptions.exe</PackagePath>
-      <Modified>2015-11-29T00:22:05.540</Modified>
+      <Modified>2015-11-29T06:16:29.910</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -109,7 +101,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-29T00:48:35.303</Modified>
+      <Modified>2015-11-29T06:11:19.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
@@ -509,11 +501,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\UWPDiplomaOptions.exe">
       <PackagePath>UWPDiplomaOptions.exe</PackagePath>
-      <Modified>2015-11-29T00:48:35.716</Modified>
+      <Modified>2015-11-29T06:16:30.503</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\UWPDiplomaOptions.xr.xml">
       <PackagePath>UWPDiplomaOptions.xr.xml</PackagePath>
-      <Modified>2015-11-26T22:45:42.000</Modified>
+      <Modified>2015-11-29T06:11:18.247</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
