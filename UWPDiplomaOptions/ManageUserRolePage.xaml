@@ -5,13 +5,16 @@
     xmlns:local="using:UWPDiplomaOptions.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Loaded="Page_Loaded">
+    mc:Ignorable="d" Loading="Page_Loading">
 
     <Grid Background="#0078D7" HorizontalAlignment="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>    <!-- header -->
             <RowDefinition Height="Auto"/>  <!-- Table header row -->
             <RowDefinition Height="Auto"/>  <!-- Table-->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -43,5 +46,18 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
+        <Button Grid.Row="3"  Grid.Column="1" Name="AddUserRole" Content="Add Role" HorizontalAlignment="Center" Click="AddUserRole_Click"/>
+        <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center">Auto Generate</TextBlock>
+        <TextBox Grid.Row="3"  Grid.Column="3" Name="UserRoleNameWillBeAdded" PlaceholderText="Role Name" />
+
+        <Button Grid.Row="4"  Grid.Column="1" Name="EditUserRole" Content="Edit Role" HorizontalAlignment="Center" Click="EditUserRole_Click"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Name="UserRoleIdWillBeEdited" PlaceholderText="Enter role Id to edit" />
+        <TextBox Grid.Row="4"  Grid.Column="3" Name="UserRoleNameWillBeEdited" PlaceholderText="New role name" />
+        
+        <Button Grid.Row="5"  Grid.Column="1" Name="DeleteUserRole" Content="Delete Role" HorizontalAlignment="Center" Click="DeleteUserRole_Click"/>
+        <TextBox Grid.Row="5" Grid.Column="2" Name="UserRoleIdWillBeDeleted" PlaceholderText="Enter role Id to delete" />
+
+        <ProgressRing Grid.Row="3" Grid.Column="2" Name="UserRoleLoadingProessRing" Width="40" Height="40" />
     </Grid>
 </Page>

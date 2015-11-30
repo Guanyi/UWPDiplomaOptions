@@ -5,7 +5,7 @@
     xmlns:local="using:UWPDiplomaOptions.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Loaded="Page_Loaded" Loading="Page_Loading">
+    mc:Ignorable="d" Loading="Page_Loading">
 
     <Grid Background="#0078D7" HorizontalAlignment="Center">
         <Grid.RowDefinitions>
@@ -55,9 +55,9 @@
         </ListView>
 
         <Button Grid.Row="3"  Grid.Column="1" Name="AddOption" Content="Add Option" Click="AddOption_Click" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Row="3" Grid.Column="2" Name="OptionId" HorizontalAlignment="Center">Auto Generate</TextBlock>
-        <TextBox Grid.Row="3"  Grid.Column="3" Name="OptionTitle" PlaceholderText="Option Title" />
-        <ComboBox Grid.Row="3"   Grid.Column="4" Name="Active" SelectedIndex="0" HorizontalAlignment="Center">
+        <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center">Auto Generate</TextBlock>
+        <TextBox Grid.Row="3"  Grid.Column="3" Name="OptionTitleWillBeAdded" PlaceholderText="Option Title" />
+        <ComboBox Grid.Row="3"   Grid.Column="4" Name="OptionActiveWillBeAdded" SelectedIndex="0" HorizontalAlignment="Center">
            <ComboBoxItem Content="Yes" Tag="1" />
            <ComboBoxItem Content="No" Tag="0" />
         </ComboBox>
@@ -70,7 +70,7 @@
             <ComboBoxItem Content="No" Tag="0" />
         </ComboBox>
         <Button Grid.Row="5"  Grid.Column="1" Name="DeleteOption" Content="Delete Option" Click="DeleteOption_Click" HorizontalAlignment="Center"/>
-        <TextBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="1" Name="IdWillBeDeleted" PlaceholderText="Enter option Id to delete" />
+        <TextBox Grid.Row="5" Grid.Column="2" Name="OptionIdWillBeDeleted" PlaceholderText="Enter option Id to delete" />
 
         <ProgressRing Grid.Row="3" Grid.Column="3" Name="OptionLoadingProessRing" Width="40" Height="40" />
     </Grid>

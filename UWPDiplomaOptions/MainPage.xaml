@@ -13,9 +13,11 @@
             <Button Name="BackButton" Content="Back" Click="BackButton_Click" FontSize="26.667" Foreground="White" />
             <Button Name="ForwardButton" Content="Forward" Click="ForwardButton_Click" FontSize="26.667" Foreground="White"/>
             <Button Name="LogOffButton" Content="Log Off" Click="LogOffButton_Click"  FontSize="26.667" Foreground="White"/>
+            <Button Name="ManageChoiceButton" Content="Manage Choices" FontSize="26.667" Foreground="White" Click="ManageChoiceButton_Click"/>
             <Button Name="ManageOptionButton" Content="Manage Options" FontSize="26.667" Foreground="White" Click="ManageOptionButton_Click"/>
-            <Button Name="ManageYearTermButton" Content="Manage YearTerm" FontSize="26.667" Foreground="White" Click="ManageYearTermButton_Click"/>
-            <Button Name="ManageUserRoleButton" Content="Manage User Role" FontSize="26.667" Foreground="White" Click="ManageUserRoleButton_Click"/>
+            <Button Name="ManageYearTermButton" Content="Manage YearTerms" FontSize="26.667" Foreground="White" Click="ManageYearTermButton_Click"/>
+            <Button Name="ManageUserRoleButton" Content="Manage User Roles" FontSize="26.667" Foreground="White" Click="ManageUserRoleButton_Click"/>
+            <Button Name="ManageUserButton" Content="Manage Users" FontSize="26.667" Foreground="White" Click="ManageUserButton_Click"/>
         </StackPanel>
         <Frame Name="MainFrame"/>
         <TextBlock Name="Footer" Text="© 2015 - Option Selector" HorizontalAlignment="Center" Foreground="White"/>

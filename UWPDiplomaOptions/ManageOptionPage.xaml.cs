@@ -37,17 +37,12 @@ namespace UWPDiplomaOptions
             this.InitializeComponent();
         }
 
-        private async void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private async void AddOption_Click(object sender, RoutedEventArgs e)
         {
-            if (OptionTitle.Text != "")
+            if (OptionTitleWillBeAdded.Text != "")
             {
-                bool active = ((string)Active.SelectionBoxItem == "Yes") ? true : false;
-                string title = OptionTitle.Text;
+                bool active = ((string)OptionActiveWillBeAdded.SelectionBoxItem == "Yes") ? true : false;
+                string title = OptionTitleWillBeAdded.Text;
                 var obj = new { Title = title, IsActive = active };
                 await OptionManager.AddOption(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), Options);
             }
@@ -55,9 +50,9 @@ namespace UWPDiplomaOptions
 
         private async void DeleteOption_Click(object sender, RoutedEventArgs e)
         {
-            if(IdWillBeDeleted.Text != "")
+            if(OptionIdWillBeDeleted.Text != "")
             {
-                string id = IdWillBeDeleted.Text;
+                string id = OptionIdWillBeDeleted.Text;
                 await OptionManager.DeleteOption(id, Options);
             }
         }

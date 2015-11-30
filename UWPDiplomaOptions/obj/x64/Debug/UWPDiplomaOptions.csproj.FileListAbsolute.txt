@@ -472,3 +472,8 @@ C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplo
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x64\Debug\Core\WinMetadata\Windows.winmd
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x64\Debug\Core\resources.pri
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x64\Debug\UWPDiplomaOptions.csprojResolveAssemblyReference.cache
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x64\Debug\ManageUserPage.xbf
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x64\Debug\ManageUserPage.g.i.cs
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x64\Debug\ManageUserPage.g.cs
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x64\Debug\ManageUserPage.xaml
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x64\Debug\ManageUserPage.xbf

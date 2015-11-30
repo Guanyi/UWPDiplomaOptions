@@ -64,7 +64,6 @@ namespace UWPDiplomaOptions.Models
                 var dialog = new Windows.UI.Popups.MessageDialog("Cannot add record");
                 await dialog.ShowAsync();
             }
-            
         }
 
         public static async Task EditOption(StringContent optionJsonToBeEdited, Option updatedOption, ObservableCollection<Option> OptionsList)

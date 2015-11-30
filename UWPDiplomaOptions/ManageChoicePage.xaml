@@ -2,12 +2,81 @@
     x:Class="UWPDiplomaOptions.ManageChoicePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:UWPDiplomaOptions"
+    xmlns:local="using:UWPDiplomaOptions.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loading="Page_Loading">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#0078D7" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/> <!-- header -->
+            <RowDefinition Height="Auto"/><!-- Table header row -->
+            <RowDefinition Height="Auto"/><!-- Table-->
+            <RowDefinition Height="Auto"/><!-- Add-->
+            <RowDefinition Height="Auto"/><!-- Delete-->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
 
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Id" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Student Id" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="First Name" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="Last Name" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="4" Text="First Choice" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="5" Text="Second Choice" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="6" Text="Three Choice" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="7" Text="Fourth Choice" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="8" Text="Year" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="9" Text="Term" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="10" Text="Selection Date" HorizontalAlignment="Center" />
+
+        <ScrollViewer Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="11" VerticalScrollBarVisibility="Visible">
+            <ListView ItemsSource="{x:Bind Choices}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Choice">
+                    <Grid Background="Beige" Width="1280"  HorizontalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="8*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="8*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Column="0" Text="{x:Bind ChoiceId}" FontSize="15" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="1" Text="{x:Bind StudentId}" FontSize="15" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" Text="{x:Bind StudentFirstName}" FontSize="15" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="3" Text="{x:Bind StudentLastName}" FontSize="15" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="4" Text="{x:Bind FirstChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="5" Text="{x:Bind SecondChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="6" Text="{x:Bind ThirdChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="7" Text="{x:Bind FourthChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="8" Text="{x:Bind Year}" FontSize="15" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="9" Text="{x:Bind Term}" FontSize="15" HorizontalAlignment="Center"/>
+                        <TextBlock Grid.Column="10" Text="{x:Bind SelectionDate}" FontSize="15" HorizontalAlignment="Center"/>
+                    </Grid >
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </ScrollViewer>
     </Grid>
 </Page>

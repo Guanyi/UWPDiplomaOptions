@@ -68,5 +68,15 @@ namespace UWPDiplomaOptions
         {
             MainFrame.Navigate(typeof(ManageUserRolePage));
         }
+
+        private void ManageChoiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(ManageChoicePage));
+        }
+
+        private void ManageUserButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(typeof(ManageUserPage));
+        }
     }
 }

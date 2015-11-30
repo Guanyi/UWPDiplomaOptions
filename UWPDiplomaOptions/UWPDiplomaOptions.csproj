@@ -114,6 +114,9 @@
     <Compile Include="ManageOptionPage.xaml.cs">
       <DependentUpon>ManageOptionPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ManageUserPage.xaml.cs">
+      <DependentUpon>ManageUserPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ManageUserRolePage.xaml.cs">
       <DependentUpon>ManageUserRolePage.xaml</DependentUpon>
     </Compile>
@@ -167,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ManageOptionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageUserPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
