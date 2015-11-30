@@ -1374,4 +1374,7 @@ C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplo
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x86\Debug\Core\UWPDiplomaOptions.xr.xml
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x86\Debug\Core\WinMetadata\Windows.winmd
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x86\Debug\Core\resources.pri
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Newtonsoft.Json.dll
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x86\Debug\Core\Newtonsoft.Json.dll
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x86\Debug\UWPDiplomaOptions.csprojResolveAssemblyReference.cache

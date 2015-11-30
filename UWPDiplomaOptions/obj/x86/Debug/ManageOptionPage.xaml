@@ -17,7 +17,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/> <!-- checkbox -->
+            <ColumnDefinition Width="2*"/> <!-- checkbox -->
             <ColumnDefinition Width="2*"/> <!-- OptionId -->
             <ColumnDefinition Width="5*"/> <!-- Title    -->
             <ColumnDefinition Width="2*"/> <!-- IsActive -->
@@ -28,11 +28,11 @@
             <Grid Width="853">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="5*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Check" HorizontalAlignment="Center" />
+                <TextBlock Grid.Column="0" Text="Check to delete" HorizontalAlignment="Center" />
                 <TextBlock Grid.Column="1" Text="Id" HorizontalAlignment="Center" />
                 <TextBlock Grid.Column="2" Text="Title" HorizontalAlignment="Center" />
                 <TextBlock Grid.Column="3" Text="Is Active" HorizontalAlignment="Center" />
@@ -42,32 +42,34 @@
         <ListView x:ConnectionId='2' Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4"                               >
             <ListView.ItemTemplate>
                 <DataTemplate                          >
-                    <Grid x:ConnectionId='6' Background="Beige" Width="853"  HorizontalAlignment="Center">
+                    <Grid x:ConnectionId='7' Background="Beige" Width="853"  HorizontalAlignment="Center">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="2*"/>
-                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="5*"/>
                             <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
-                        <CheckBox Grid.Column="0" HorizontalAlignment="Center"/>
-                        <TextBlock x:ConnectionId='7' Grid.Column="1"                          FontSize="18.667" HorizontalAlignment="Center"/>
-                        <TextBlock x:ConnectionId='8' Grid.Column="2"                       FontSize="18.667" HorizontalAlignment="Center"/>
-                        <TextBlock x:ConnectionId='9' Grid.Column="3"                          FontSize="18.667" HorizontalAlignment="Center"/>
+                        <CheckBox x:ConnectionId='8' Grid.Column="0" HorizontalAlignment="Center"                                 />
+                        <TextBlock x:ConnectionId='9' Grid.Column="1"                          FontSize="18.667" HorizontalAlignment="Center"/>
+                        <TextBlock x:ConnectionId='10' Grid.Column="2"                       FontSize="18.667" HorizontalAlignment="Center"/>
+                        <TextBlock x:ConnectionId='11' Grid.Column="3"                          FontSize="18.667" HorizontalAlignment="Center"/>
                     </Grid >
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
-        <StackPanel Grid.Row="3"  Grid.Column="2" Grid.ColumnSpan="3" Orientation="Horizontal">
+        <StackPanel Grid.Row="3"  Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
             <Grid Width="853">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:ConnectionId='3' Grid.Column="0" Name="AddOption" Content="Add Option"                        />
-                <TextBox x:ConnectionId='4' Grid.Column="1" Name="OptionTitle" PlaceholderText="Option Title" />
-                <ComboBox x:ConnectionId='5' Grid.Column="2" Name="Active" SelectedIndex="0">
+                <Button x:ConnectionId='3' Grid.Column="0" Name="DeleteOption" Content="Delete Option"                           />
+                <Button x:ConnectionId='4' Grid.Column="1" Name="AddOption" Content="Add Option"                        />
+                <TextBox x:ConnectionId='5' Grid.Column="2" Name="OptionTitle" PlaceholderText="Option Title" />
+                <ComboBox x:ConnectionId='6' Grid.Column="3" Name="Active" SelectedIndex="0">
                     <ComboBoxItem Content="Yes" Tag="1" />
                     <ComboBoxItem Content="No" Tag="0" />
                 </ComboBox>

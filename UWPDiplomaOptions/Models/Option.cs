@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -45,5 +46,26 @@ namespace UWPDiplomaOptions.Models
                 OptionsList.Add(option);
             }
         }
+
+        public static async Task AddOption(StringContent optionJson, ObservableCollection<Option> OptionsList)
+        {
+            var http = new HttpClient();
+            var response = await http.PostAsync("http://uwproject.feifei.ca/api/Options", optionJson);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                JsonValue value = JsonValue.Parse(result);
+                Option option = JsonConvert.DeserializeObject<Option>(value.ToString());
+                OptionsList.Add(option);
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot add record");
+                await dialog.ShowAsync();
+            }
+            
+        }
+
     }
 }
