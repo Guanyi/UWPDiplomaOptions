@@ -39,25 +39,50 @@ namespace UWPDiplomaOptions
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            await OptionManager.GetOptions(Options);
+            
         }
 
         private async void AddOption_Click(object sender, RoutedEventArgs e)
         {
-            bool active =((string)Active.SelectionBoxItem == "Yes") ? true:  false;
-            string title = OptionTitle.Text;
-            var obj = new { Title = title, IsActive = active };
-            await OptionManager.AddOption(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), Options);
+            if (OptionTitle.Text != "")
+            {
+                bool active = ((string)Active.SelectionBoxItem == "Yes") ? true : false;
+                string title = OptionTitle.Text;
+                var obj = new { Title = title, IsActive = active };
+                await OptionManager.AddOption(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), Options);
+            }
         }
 
-        private void DeleteOption_Click(object sender, RoutedEventArgs e)
+        private async void DeleteOption_Click(object sender, RoutedEventArgs e)
         {
-            
+            if(IdWillBeDeleted.Text != "")
+            {
+                string id = IdWillBeDeleted.Text;
+                await OptionManager.DeleteOption(id, Options);
+            }
         }
 
-        private void DeleteCheckBox_Checked(object sender, RoutedEventArgs e)
+        private async void EditOption_Click(object sender, RoutedEventArgs e)
         {
-            sender.GetHashCode();
+            int id;
+            if (OptionIdWillBeEdited.Text != "" && OptionTitleWillBeEdited.Text != "" && Int32.TryParse(OptionIdWillBeEdited.Text, out id))
+            {
+                string title = OptionTitleWillBeEdited.Text;
+                bool active = ((string)OptionActiveWillBeEdited.SelectionBoxItem == "Yes") ? true : false;
+                var obj = new Option() { OptionId = id, Title = title, IsActive = active };
+                await OptionManager.EditOption(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), obj, Options);
+            }
+        }
+
+        private async void Page_Loading(FrameworkElement sender, object args)
+        {
+            OptionLoadingProessRing.IsActive = true;
+            OptionLoadingProessRing.Visibility = Visibility.Visible;
+
+            await OptionManager.GetOptions(Options);
+
+            OptionLoadingProessRing.IsActive = false;
+            OptionLoadingProessRing.Visibility = Visibility.Collapsed;
         }
     }
 }

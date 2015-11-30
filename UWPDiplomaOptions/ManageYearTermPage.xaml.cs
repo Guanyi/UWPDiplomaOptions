@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using UWPDiplomaOptions.Models;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -34,6 +37,38 @@ namespace UWPDiplomaOptions
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             await YearTermManager.GetYearTerms(YearTerms);
+        }
+
+        private async void AddYearTerm_Click(object sender, RoutedEventArgs e)
+        {
+            string year = (string)YearWillBeAdded.SelectionBoxItem;
+            string term = (string)TermWillBeAdded.SelectionBoxItem;
+            bool isDefault = ((string)YearTermIsDefaultWillBeAdded.SelectionBoxItem == "Yes") ? true : false;
+            var obj = new { Year = year, Term = term, IsDefault = isDefault };
+            await YearTermManager.AddYearTerm(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), YearTerms);
+        }
+
+        private async void EditYearTerm_Click(object sender, RoutedEventArgs e)
+        {
+            int id;
+            if (YearTermIdWillBeEdited.Text != "" && Int32.TryParse(YearTermIdWillBeEdited.Text, out id))
+            {
+                int year = Int32.Parse( (string)YearWillBeEdited.SelectionBoxItem );
+                int term = Int32.Parse( (string)TermWillBeEdited.SelectionBoxItem );
+                bool isDefault = ((string)YearTermIsDefaultWillBeEdited.SelectionBoxItem == "Yes") ? true : false;
+                var obj = new YearTerm() { YearTermId = id, Year = year, Term = term, IsDefault = isDefault };
+                await YearTermManager.EditYearTerm(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), obj, YearTerms);
+            }
+        }
+
+        private async void DeleteYearTerm_Click(object sender, RoutedEventArgs e)
+        {
+            int id;
+            if (YearTermIdWillBeDeleted.Text != "" && Int32.TryParse(YearTermIdWillBeDeleted.Text, out id))
+            {
+                await YearTermManager.DeleteYearTerm(id.ToString(), YearTerms);
+            }
+ 
         }
     }
 }

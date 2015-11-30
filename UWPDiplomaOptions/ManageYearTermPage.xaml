@@ -7,11 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d" Loaded="Page_Loaded">
 
-    <Grid Background="#0078D7">
+    <Grid Background="#0078D7" HorizontalAlignment="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>   <!-- header -->
             <RowDefinition Height="Auto"/> <!-- Table header row -->
             <RowDefinition Height="Auto"/> <!-- Table-->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -24,24 +27,14 @@
             <ColumnDefinition Width="1*"/>  <!-- Description-->
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.Column="1" Grid.ColumnSpan="6">
-            <Grid Width="960">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="1*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Check" HorizontalAlignment="Center" />
-                <TextBlock Grid.Column="1" Text="Id" HorizontalAlignment="Center" />
-                <TextBlock Grid.Column="2" Text="Year" HorizontalAlignment="Center" />
-                <TextBlock Grid.Column="3" Text="Term" HorizontalAlignment="Center" />
-                <TextBlock Grid.Column="4" Text="Is Default" HorizontalAlignment="Center" />
-                <TextBlock Grid.Column="5" Text="Description" HorizontalAlignment="Center" />
-            </Grid>
-        </StackPanel>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Check" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Id" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="Year" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="4" Text="Term" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="5" Text="Is Default" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="6" Text="Description" HorizontalAlignment="Center" />
+
 
         <ListView ItemsSource="{x:Bind YearTerms}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="6">
             <ListView.ItemTemplate>
@@ -65,5 +58,49 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <!-- ***************************************************************************************************-->
+
+        <Button Grid.Row="3" Grid.Column="1" Name="AddYearTerm" Content="Add Year Term" HorizontalAlignment="Center" Click="AddYearTerm_Click"/>
+        <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center">Auto Generate</TextBlock>
+        <ComboBox Grid.Row="3" Grid.Column="3" Name="YearWillBeAdded" SelectedIndex="0" HorizontalAlignment="Center">
+            <ComboBoxItem Content="2015" Tag="1" />
+            <ComboBoxItem Content="2016" Tag="2" />
+            <ComboBoxItem Content="2017" Tag="3" />
+        </ComboBox>
+        <ComboBox Grid.Row="3" Grid.Column="4" Name="TermWillBeAdded" SelectedIndex="0" HorizontalAlignment="Center">
+            <ComboBoxItem Content="10" Tag="1" />
+            <ComboBoxItem Content="20" Tag="2" />
+            <ComboBoxItem Content="30" Tag="3" />
+        </ComboBox>
+        <ComboBox Grid.Row="3" Grid.Column="5" Name="YearTermIsDefaultWillBeAdded" SelectedIndex="1" HorizontalAlignment="Center">
+            <ComboBoxItem Content="Yes" Tag="1" />
+            <ComboBoxItem Content="No" Tag="2" />
+        </ComboBox>
+        <TextBlock Grid.Row="3" Grid.Column="6" HorizontalAlignment="Center">Auto Generate</TextBlock>
+        <!-- ***************************************************************************************************-->
+        
+        <Button Grid.Row="4"  Grid.Column="1" Name="EditYearTerm" Content="Edit Year Term" HorizontalAlignment="Center" Click="EditYearTerm_Click"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Name="YearTermIdWillBeEdited" PlaceholderText="Enter Id to edit" />
+        
+        <ComboBox Grid.Row="4" Grid.Column="3" Name="YearWillBeEdited" SelectedIndex="0" HorizontalAlignment="Center">
+            <ComboBoxItem Content="2015" Tag="1" />
+            <ComboBoxItem Content="2016" Tag="2" />
+            <ComboBoxItem Content="2017" Tag="3" />
+        </ComboBox>
+        <ComboBox Grid.Row="4" Grid.Column="4" Name="TermWillBeEdited" SelectedIndex="0" HorizontalAlignment="Center">
+            <ComboBoxItem Content="10" Tag="1" />
+            <ComboBoxItem Content="20" Tag="2" />
+            <ComboBoxItem Content="30" Tag="3" />
+        </ComboBox>
+        <ComboBox Grid.Row="4"   Grid.Column="5" Name="YearTermIsDefaultWillBeEdited" SelectedIndex="1" HorizontalAlignment="Center">
+            <ComboBoxItem Content="Yes" Tag="1" />
+            <ComboBoxItem Content="No" Tag="0" />
+        </ComboBox>
+        <TextBlock Grid.Row="4" Grid.Column="6" HorizontalAlignment="Center">Auto Generate</TextBlock>
+        <!-- ***************************************************************************************************-->
+
+        <Button Grid.Row="5"  Grid.Column="1" Name="DeleteYearTerm" Content="Delete Year Term" HorizontalAlignment="Center" Click="DeleteYearTerm_Click"/>
+        <TextBox Grid.Row="5" Grid.Column="2" Name="YearTermIdWillBeDeleted" PlaceholderText="Enter Id to delete" />
+
     </Grid>
 </Page>

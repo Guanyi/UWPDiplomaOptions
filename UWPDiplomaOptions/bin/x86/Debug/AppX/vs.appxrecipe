@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-29T15:11:45.861</Modified>
+      <Modified>2015-11-30T02:03:34.785</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -69,7 +69,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\entrypoint\UWPDiplomaOptions.exe">
       <PackagePath>entrypoint\UWPDiplomaOptions.exe</PackagePath>
-      <Modified>2015-11-29T15:11:44.552</Modified>
+      <Modified>2015-11-30T02:03:34.300</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -105,7 +105,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-29T15:11:45.526</Modified>
+      <Modified>2015-11-30T02:02:12.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
@@ -505,11 +505,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\UWPDiplomaOptions.exe">
       <PackagePath>UWPDiplomaOptions.exe</PackagePath>
-      <Modified>2015-11-29T15:11:45.857</Modified>
+      <Modified>2015-11-30T02:03:34.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\UWPDiplomaOptions.xr.xml">
       <PackagePath>UWPDiplomaOptions.xr.xml</PackagePath>
-      <Modified>2015-11-29T06:11:18.247</Modified>
+      <Modified>2015-11-30T02:02:11.272</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

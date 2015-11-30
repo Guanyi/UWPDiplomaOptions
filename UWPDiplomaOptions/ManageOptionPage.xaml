@@ -5,39 +5,35 @@
     xmlns:local="using:UWPDiplomaOptions.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Loaded="Page_Loaded">
+    mc:Ignorable="d" Loaded="Page_Loaded" Loading="Page_Loading">
 
-    <Grid Background="#0078D7">
+    <Grid Background="#0078D7" HorizontalAlignment="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>   <!-- header -->
             <RowDefinition Height="Auto"/> <!-- Table header row -->
             <RowDefinition Height="Auto"/> <!-- Table-->
+            <RowDefinition Height="Auto"/> <!-- Add-->
+            <RowDefinition Height="Auto"/> <!-- Delete-->
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="2*"/> <!-- checkbox -->
-            <ColumnDefinition Width="2*"/> <!-- OptionId -->
-            <ColumnDefinition Width="5*"/> <!-- Title    -->
-            <ColumnDefinition Width="2*"/> <!-- IsActive -->
+            <ColumnDefinition Width="2*"/>
+            <!-- checkbox -->
+            <ColumnDefinition Width="2*"/>
+            <!-- OptionId -->
+            <ColumnDefinition Width="5*"/>
+            <!-- Title    -->
+            <ColumnDefinition Width="2*"/>
+            <!-- IsActive -->
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="1"  Grid.Column="1" Grid.ColumnSpan="4" Orientation="Horizontal">
-            <Grid Width="853">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="Check to delete" HorizontalAlignment="Center" />
-                <TextBlock Grid.Column="1" Text="Id" HorizontalAlignment="Center" />
-                <TextBlock Grid.Column="2" Text="Title" HorizontalAlignment="Center" />
-                <TextBlock Grid.Column="3" Text="Is Active" HorizontalAlignment="Center" />
-            </Grid>
-        </StackPanel>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Check to delete" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Id" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="Title" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="4" Text="Is Active" HorizontalAlignment="Center" />
 
         <ListView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" ItemsSource="{x:Bind Options}">
             <ListView.ItemTemplate>
@@ -49,7 +45,7 @@
                             <ColumnDefinition Width="5*"/>
                             <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
-                        <CheckBox Grid.Column="0" HorizontalAlignment="Center" Checked="DeleteCheckBox_Checked"/>
+                        <CheckBox Grid.Column="0" HorizontalAlignment="Center"/>
                         <TextBlock Grid.Column="1" Text="{x:Bind OptionId}" FontSize="18.667" HorizontalAlignment="Center"/>
                         <TextBlock Grid.Column="2" Text="{x:Bind Title}" FontSize="18.667" HorizontalAlignment="Center"/>
                         <TextBlock Grid.Column="3" Text="{x:Bind IsActive}" FontSize="18.667" HorizontalAlignment="Center"/>
@@ -58,22 +54,24 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <StackPanel Grid.Row="3"  Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
-            <Grid Width="853">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Name="DeleteOption" Content="Delete Option" Click="DeleteOption_Click"/>
-                <Button Grid.Column="1" Name="AddOption" Content="Add Option" Click="AddOption_Click"/>
-                <TextBox Grid.Column="2" Name="OptionTitle" PlaceholderText="Option Title" />
-                <ComboBox Grid.Column="3" Name="Active" SelectedIndex="0">
-                    <ComboBoxItem Content="Yes" Tag="1" />
-                    <ComboBoxItem Content="No" Tag="0" />
-                </ComboBox>
-            </Grid>
-        </StackPanel>
+        <Button Grid.Row="3"  Grid.Column="1" Name="AddOption" Content="Add Option" Click="AddOption_Click" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Row="3" Grid.Column="2" Name="OptionId" HorizontalAlignment="Center">Auto Generate</TextBlock>
+        <TextBox Grid.Row="3"  Grid.Column="3" Name="OptionTitle" PlaceholderText="Option Title" />
+        <ComboBox Grid.Row="3"   Grid.Column="4" Name="Active" SelectedIndex="0" HorizontalAlignment="Center">
+           <ComboBoxItem Content="Yes" Tag="1" />
+           <ComboBoxItem Content="No" Tag="0" />
+        </ComboBox>
+
+        <Button Grid.Row="4"  Grid.Column="1" Name="EditOption" Content="Edit Option" HorizontalAlignment="Center" Click="EditOption_Click"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Name="OptionIdWillBeEdited" PlaceholderText="Enter option Id to edit" />
+        <TextBox Grid.Row="4"  Grid.Column="3" Name="OptionTitleWillBeEdited" PlaceholderText="New option title" />
+        <ComboBox Grid.Row="4"   Grid.Column="4" Name="OptionActiveWillBeEdited" SelectedIndex="0" HorizontalAlignment="Center">
+            <ComboBoxItem Content="Yes" Tag="1" />
+            <ComboBoxItem Content="No" Tag="0" />
+        </ComboBox>
+        <Button Grid.Row="5"  Grid.Column="1" Name="DeleteOption" Content="Delete Option" Click="DeleteOption_Click" HorizontalAlignment="Center"/>
+        <TextBox Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="1" Name="IdWillBeDeleted" PlaceholderText="Enter option Id to delete" />
+
+        <ProgressRing Grid.Row="3" Grid.Column="3" Name="OptionLoadingProessRing" Width="40" Height="40" />
     </Grid>
 </Page>

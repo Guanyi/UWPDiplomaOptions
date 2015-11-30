@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -44,6 +45,64 @@ namespace UWPDiplomaOptions.Models
                     IsDefault = isDefault,
                 };
                 YearTermsList.Add(yearTerm);
+            }
+        }
+
+        public static async Task AddYearTerm(StringContent yearTermJson, ObservableCollection<YearTerm> YearTermList)
+        {
+            var http = new HttpClient();
+            var response = await http.PostAsync("http://uwproject.feifei.ca/api/YearTerms", yearTermJson);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                JsonValue value = JsonValue.Parse(result);
+                YearTerm yearTerm = JsonConvert.DeserializeObject<YearTerm>(value.ToString());
+                YearTermList.Add(yearTerm);
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot add record");
+                await dialog.ShowAsync();
+            }
+
+        }
+
+        public static async Task EditYearTerm(StringContent YearTermJsonToBeEdited, YearTerm updatedYearTerm, ObservableCollection<YearTerm> YearTermList)
+        {
+            var http = new HttpClient();
+            string requestUri = "http://uwproject.feifei.ca/api/YearTerms/" + updatedYearTerm.YearTermId;
+            var response = await http.PutAsync(requestUri, YearTermJsonToBeEdited);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                YearTerm currentYearTerm = YearTermList.FirstOrDefault(o => o.YearTermId == updatedYearTerm.YearTermId);
+                currentYearTerm = updatedYearTerm;
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot edit record");
+                await dialog.ShowAsync();
+            }
+        }
+
+        public static async Task DeleteYearTerm(string YearTermIdToBeDeleted, ObservableCollection<YearTerm> YearTermList)
+        {
+            var http = new HttpClient();
+            var response = await http.DeleteAsync("http://uwproject.feifei.ca/api/YearTerms/" + YearTermIdToBeDeleted);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                JsonValue value = JsonValue.Parse(result);
+                YearTerm yearTerm = JsonConvert.DeserializeObject<YearTerm>(value.ToString());
+                YearTermList.Remove(yearTerm);
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot delete record");
+                await dialog.ShowAsync();
             }
         }
     }

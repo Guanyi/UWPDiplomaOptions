@@ -67,5 +67,43 @@ namespace UWPDiplomaOptions.Models
             
         }
 
+        public static async Task EditOption(StringContent optionJsonToBeEdited, Option updatedOption, ObservableCollection<Option> OptionsList)
+        {
+            var http = new HttpClient();
+            string requestUri = "http://uwproject.feifei.ca/api/Options/" + updatedOption.OptionId;
+            var response = await http.PutAsync(requestUri, optionJsonToBeEdited);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                Option currentOption = OptionsList.FirstOrDefault(o => o.OptionId == updatedOption.OptionId);
+                currentOption = updatedOption; 
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot edit record");
+                await dialog.ShowAsync();
+            }
+        }
+
+        public static async Task DeleteOption(string idToBeDeleted, ObservableCollection<Option> OptionsList)
+        {
+            var http = new HttpClient();
+            var response = await http.DeleteAsync("http://uwproject.feifei.ca/api/Options/" + idToBeDeleted);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                JsonValue value = JsonValue.Parse(result);
+                Option option = JsonConvert.DeserializeObject<Option>(value.ToString());
+                OptionsList.Remove(option);
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot delete record");
+                await dialog.ShowAsync();
+            }
+        }
+
     }
 }
