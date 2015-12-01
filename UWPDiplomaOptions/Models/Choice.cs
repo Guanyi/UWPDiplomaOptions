@@ -65,5 +65,24 @@ namespace UWPDiplomaOptions.Models
                 ChoiceList.Add(choice);
             }
         }
+
+        public static async Task EditChoice(StringContent optionJsonToBeEdited, Choice updatedChoice, ObservableCollection<Choice> ChoicesList)
+        {
+            var http = new HttpClient();
+            string requestUri = "http://uwproject.feifei.ca/api/Choices/" + updatedChoice.ChoiceId;
+            var response = await http.PutAsync(requestUri, optionJsonToBeEdited);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                Choice currentChoice = ChoicesList.FirstOrDefault(c => c.ChoiceId == updatedChoice.ChoiceId);
+                currentChoice = updatedChoice;
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot edit record");
+                await dialog.ShowAsync();
+            }
+        }
     }
 }

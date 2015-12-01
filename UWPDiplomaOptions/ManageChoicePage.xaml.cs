@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
 using UWPDiplomaOptions.Models;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -36,5 +39,11 @@ namespace UWPDiplomaOptions
         {
             await ChoiceManager.GetChoices(Choices);
         }
+
+        /*private async void EditChoice_Click(object sender, RoutedEventArgs e)
+        {
+            int id;
+            await ChoiceManager.EditChoice(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), obj, Choices);
+        }*/
     }
 }
