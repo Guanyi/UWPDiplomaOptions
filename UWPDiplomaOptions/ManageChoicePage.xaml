@@ -45,46 +45,55 @@
         <TextBlock Grid.Row="1" Grid.Column="10" Text="Selection Date" HorizontalAlignment="Center" />
 
         <ScrollViewer Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="11" VerticalScrollBarVisibility="Visible">
-            <ListView ItemsSource="{x:Bind Choices}">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="local:Choice">
-                    <Grid Background="Beige" Width="1280"  HorizontalAlignment="Center">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1*"/>
-                            <ColumnDefinition Width="4*"/>
-                            <ColumnDefinition Width="4*"/>
-                            <ColumnDefinition Width="4*"/>
-                            <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="2*"/>
-                            <ColumnDefinition Width="2*"/>
-                            <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="7*"/>
-                        </Grid.ColumnDefinitions>
-                        
-                        <TextBlock Grid.Column="0" Text="{x:Bind ChoiceId}" FontSize="15" HorizontalAlignment="Center"/>
-                        <TextBlock Grid.Column="1" Text="{x:Bind StudentId}" FontSize="15" HorizontalAlignment="Center"/>
-                        <TextBlock Grid.Column="2" Text="{x:Bind StudentFirstName}" FontSize="15" HorizontalAlignment="Center"/>
-                        <TextBlock Grid.Column="3" Text="{x:Bind StudentLastName}" FontSize="15" HorizontalAlignment="Center"/>
-                        <TextBlock Grid.Column="4" Text="{x:Bind FirstChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
-                        <TextBlock Grid.Column="5" Text="{x:Bind SecondChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
-                        <TextBlock Grid.Column="6" Text="{x:Bind ThirdChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
-                        <TextBlock Grid.Column="7" Text="{x:Bind FourthChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
-                        <TextBlock Grid.Column="8" Text="{x:Bind Year}" FontSize="15" HorizontalAlignment="Center"/>
-                        <TextBlock Grid.Column="9" Text="{x:Bind Term}" FontSize="15" HorizontalAlignment="Center"/>
-                        <TextBlock Grid.Column="10" Text="{x:Bind SelectionDate}" FontSize="15" HorizontalAlignment="Center"/>
-                        <StackPanel Orientation="Horizontal" Grid.Column="11">
-                            <Button Content="Edit" Name="{x:Bind ChoiceId}" Click="Button_Click_1"/>
-                            <Button Content="Delete" Name="{x:Bind ChoiceId}" Click="Button_Click"/>
-                        </StackPanel>
+            <ListView ItemsSource="{x:Bind Choices}" Height="600">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="local:Choice">
+                        <Grid Background="Beige" Width="1280" HorizontalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="7*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="{x:Bind ChoiceId}" FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="1" Text="{x:Bind StudentId}" FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="2" Text="{x:Bind StudentFirstName}" FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="3" Text="{x:Bind StudentLastName}" FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="4" Text="{x:Bind FirstChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="5" Text="{x:Bind SecondChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="6" Text="{x:Bind ThirdChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="7" Text="{x:Bind FourthChoiceOptionTitle}" FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="8" Text="{x:Bind Year}" FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="9" Text="{x:Bind Term}" FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock Grid.Column="10" Text="{x:Bind SelectionDate}" FontSize="15" HorizontalAlignment="Center"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="11">
+                                <Button Content="Edit" Tag="{x:Bind ChoiceId}" Click="Button_Click_1"/>
+                                <Button Content="Delete" Tag="{x:Bind ChoiceId}" Click="Button_Click"/>
+                            </StackPanel>
                         </Grid >
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-            
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </ScrollViewer>
-        
+        <TextBox Grid.Row="3" Grid.Column="0" Name="txtId" PlaceholderText="ID" />
+        <TextBox Grid.Row="3" Grid.Column="1" Name="txtStudentId" PlaceholderText="Student ID" />
+        <TextBox Grid.Row="3" Grid.Column="2" Name="txtFName" PlaceholderText="First Name" />
+        <TextBox Grid.Row="3" Grid.Column="3" Name="txtLName" PlaceholderText="Last Name" />
+        <ComboBox Grid.Row="3" Grid.Column="4" Name="cbFirstChoice" />
+        <ComboBox Grid.Row="3" Grid.Column="5" Name="cbSecondChoice" />
+        <ComboBox Grid.Row="3" Grid.Column="6" Name="cbThirdChoice" />
+        <ComboBox Grid.Row="3" Grid.Column="7" Name="cbFourthChoice" />
+        <ComboBox Grid.Row="3" Grid.Column="8" Name="cbYear" />
+        <ComboBox Grid.Row="3" Grid.Column="9" Name="cbTerm" />
+        <Button Grid.Row="3"  Grid.Column="10" Name="SaveButton" Content="Save" HorizontalAlignment="Center" Click="EditChoice_Click"/>
     </Grid>
 </Page>

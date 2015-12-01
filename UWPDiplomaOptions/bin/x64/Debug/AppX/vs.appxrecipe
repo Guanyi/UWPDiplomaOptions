@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\chaos\Desktop\COMP4976\UWPDiplomaOptions\UWPDiplomaOptions\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-12-01T02:13:46.939</Modified>
+      <Modified>2015-12-01T04:57:55.213</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -69,7 +69,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chaos\Desktop\COMP4976\UWPDiplomaOptions\UWPDiplomaOptions\bin\x64\Debug\Core\entrypoint\UWPDiplomaOptions.exe">
       <PackagePath>entrypoint\UWPDiplomaOptions.exe</PackagePath>
-      <Modified>2015-12-01T02:13:45.369</Modified>
+      <Modified>2015-12-01T04:57:54.064</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chaos\Desktop\COMP4976\UWPDiplomaOptions\UWPDiplomaOptions\bin\x64\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
@@ -105,7 +105,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chaos\Desktop\COMP4976\UWPDiplomaOptions\UWPDiplomaOptions\bin\x64\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-12-01T02:13:46.418</Modified>
+      <Modified>2015-12-01T04:37:12.234</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chaos\Desktop\COMP4976\UWPDiplomaOptions\UWPDiplomaOptions\bin\x64\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
@@ -505,11 +505,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chaos\Desktop\COMP4976\UWPDiplomaOptions\UWPDiplomaOptions\bin\x64\Debug\Core\UWPDiplomaOptions.exe">
       <PackagePath>UWPDiplomaOptions.exe</PackagePath>
-      <Modified>2015-12-01T02:13:46.935</Modified>
+      <Modified>2015-12-01T04:57:55.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chaos\Desktop\COMP4976\UWPDiplomaOptions\UWPDiplomaOptions\bin\x64\Debug\Core\UWPDiplomaOptions.xr.xml">
       <PackagePath>UWPDiplomaOptions.xr.xml</PackagePath>
-      <Modified>2015-12-01T02:13:44.868</Modified>
+      <Modified>2015-12-01T03:05:31.368</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\chaos\Desktop\COMP4976\UWPDiplomaOptions\UWPDiplomaOptions\bin\x64\Debug\Core\WinMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
