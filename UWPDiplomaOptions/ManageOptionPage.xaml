@@ -28,6 +28,7 @@
             <ColumnDefinition Width="2*"/>
             <!-- IsActive -->
             <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="1" Grid.Column="1" Text="Check to delete" HorizontalAlignment="Center" />
@@ -44,8 +45,9 @@
                             <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="5*"/>
                             <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
-                        <CheckBox Grid.Column="0" HorizontalAlignment="Center"/>
+                        <CheckBox Grid.Column="0" Name="{x:Bind OptionId}" HorizontalAlignment="Center"/>
                         <TextBlock Grid.Column="1" Text="{x:Bind OptionId}" FontSize="18.667" HorizontalAlignment="Center"/>
                         <TextBlock Grid.Column="2" Text="{x:Bind Title}" FontSize="18.667" HorizontalAlignment="Center"/>
                         <TextBlock Grid.Column="3" Text="{x:Bind IsActive}" FontSize="18.667" HorizontalAlignment="Center"/>

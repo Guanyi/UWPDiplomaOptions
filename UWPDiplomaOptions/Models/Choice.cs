@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -66,11 +67,49 @@ namespace UWPDiplomaOptions.Models
             }
         }
 
-        public static async Task EditChoice(StringContent optionJsonToBeEdited, Choice updatedChoice, ObservableCollection<Choice> ChoicesList)
+        public static async Task AddChoice(StringContent choiceJson, ObservableCollection<Choice> ChoicesList)
+        {
+            var http = new HttpClient();
+            var response = await http.PostAsync("http://uwproject.feifei.ca/api/Choices", choiceJson);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                JsonValue value = JsonValue.Parse(result);
+                Choice choice = JsonConvert.DeserializeObject<Choice>(value.ToString());
+                ChoicesList.Add(choice);
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot add record");
+                await dialog.ShowAsync();
+            }
+        }
+
+        public static async Task DeleteChoice(string idToBeDeleted, ObservableCollection<Choice> ChoicesList)
+        {
+            var http = new HttpClient();
+            var response = await http.DeleteAsync("http://uwproject.feifei.ca/api/Choices/" + idToBeDeleted);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                JsonValue value = JsonValue.Parse(result);
+                Choice choice = JsonConvert.DeserializeObject<Choice>(value.ToString());
+                ChoicesList.Remove(choice);
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot delete record");
+                await dialog.ShowAsync();
+            }
+        }
+
+        public static async Task EditChoice(StringContent choiceJsonToBeEdited, Choice updatedChoice, ObservableCollection<Choice> ChoicesList)
         {
             var http = new HttpClient();
             string requestUri = "http://uwproject.feifei.ca/api/Choices/" + updatedChoice.ChoiceId;
-            var response = await http.PutAsync(requestUri, optionJsonToBeEdited);
+            var response = await http.PutAsync(requestUri, choiceJsonToBeEdited);
 
             if (response.IsSuccessStatusCode)
             {

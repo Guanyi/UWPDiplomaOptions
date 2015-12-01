@@ -39,11 +39,13 @@ namespace UWPDiplomaOptions
         {
             await ChoiceManager.GetChoices(Choices);
         }
-
-        /*private async void EditChoice_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            int id;
-            await ChoiceManager.EditChoice(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), obj, Choices);
-        }*/
+            var button = (Button)sender;
+            string id = button.Name;
+            await ChoiceManager.DeleteChoice(id, Choices);
+        }
+
+
     }
 }
