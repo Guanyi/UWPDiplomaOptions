@@ -1,8 +1,13 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text;
+using Windows.Data.Json;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -27,9 +32,47 @@ namespace UWPDiplomaOptions
             this.InitializeComponent();
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private async void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HomePage));
+            string loginName = StudentNumberBox.Text;
+            if (loginName == "" || loginName.Length != 9 || !loginName.StartsWith("A00") || PasswordBox.Password == "")
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Login Name or password not in valid format.");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                var loginCredential = new Dictionary<string, string>
+                {
+                    {"grant_type", "password"},
+                    {"username", loginName},
+                    {"password", PasswordBox.Password},
+                };
+                var http = new HttpClient();
+                var authorizationHeader = Convert.ToBase64String(Encoding.UTF8.GetBytes("secretKey"));
+                http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authorizationHeader);
+
+                LoginProessRing.IsActive = true;
+                LoginProessRing.Visibility = Visibility.Visible;
+
+                var response = await http.PostAsync("http://uwproject.feifei.ca/token", new FormUrlEncodedContent(loginCredential));
+
+                LoginProessRing.IsActive = false;
+                LoginProessRing.Visibility = Visibility.Collapsed;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = await response.Content.ReadAsStringAsync();
+                    JsonValue value = JsonValue.Parse(result);
+                    var authorizedUser = JsonConvert.DeserializeObject(value.ToString());
+                    Frame.Navigate(typeof(HomePage));
+                }
+                else
+                {
+                    var dialog = new Windows.UI.Popups.MessageDialog("Cannot authorize. Check your login name and password again.");
+                    await dialog.ShowAsync();
+                }
+            }
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)

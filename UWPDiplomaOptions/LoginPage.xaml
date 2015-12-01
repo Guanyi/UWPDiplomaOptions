@@ -8,13 +8,14 @@
     mc:Ignorable="d">
 
     <Grid Background="#0078D7">
+        <ProgressRing Grid.Row="3" Grid.Column="3" Name="LoginProessRing" Width="70" Height="70" Foreground="White"/>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock x:Name="TitleBlock" TextWrapping="Wrap" Text="Options Selection" TextAlignment="Center" Foreground="White" FontSize="64"/>
             <TextBlock Margin="0, 0, 0, 50" x:Name="SubTitle" TextWrapping="Wrap" Text="Created by Set 4R's UWP Team" TextAlignment="Center" Foreground="White"/>
             <TextBlock x:Name="StudentNumberBlock" TextWrapping="Wrap" Text="Student Number" TextAlignment="Center" Foreground="White"/>
-            <TextBox x:Name="StudentNumberBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
+            <TextBox x:Name="StudentNumberBox" TextWrapping="Wrap" Text="" Width="200"/>
             <TextBlock x:Name="PasswordBlock" TextWrapping="Wrap" Text="Password" TextAlignment="Center" Foreground="White"/>
-            <TextBox x:Name="PasswordBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
+            <PasswordBox x:Name="PasswordBox" Width="200"/>
             <CheckBox Margin="5" x:Name="RememberMe" Content="Remember me?" HorizontalAlignment="Center" VerticalAlignment="Stretch" Foreground="White"/>
             <HyperlinkButton Margin= "0, 0, 0, 15" x:Name="LoginButton" Content="Login" HorizontalAlignment="Center" Width="200" VerticalAlignment="Stretch" Background="White" Click="LoginButton_Click"/>
             <TextBlock x:Name="NewStudentBlock" TextWrapping="Wrap" Text="New Student?" TextAlignment="Center" Foreground="White"/>

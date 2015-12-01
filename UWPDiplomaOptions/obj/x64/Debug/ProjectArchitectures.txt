@@ -1,1 +1,1 @@
-C:\Users\chaos\Desktop\COMP4976\UWPDiplomaOptions\UWPDiplomaOptions\UWPDiplomaOptions.csproj;x64
+C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\UWPDiplomaOptions.csproj;x64
