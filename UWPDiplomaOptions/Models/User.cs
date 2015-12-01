@@ -69,5 +69,21 @@ namespace UWPDiplomaOptions.Models
                 await dialog.ShowAsync();
             }
         }
+        public static async Task AddUser(StringContent json, ObservableCollection<User> UserList)
+        {
+            var http = new HttpClient();
+            var response = await http.PostAsync("http://uwproject.feifei.ca/api/Account/Register", json);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Registration Successful!");
+                await dialog.ShowAsync();
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Could Not Add Record T_T");
+                await dialog.ShowAsync();
+            }
+        }
     }
 }

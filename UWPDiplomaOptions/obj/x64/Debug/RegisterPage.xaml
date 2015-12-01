@@ -16,11 +16,12 @@
             <TextBlock x:ConnectionId='5' x:Name="EmailBlock" TextWrapping="Wrap" Text="Email" TextAlignment="Center" Foreground="White"/>
             <TextBox x:ConnectionId='6' x:Name="EmailBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
             <TextBlock x:ConnectionId='7' x:Name="PasswordBlock" TextWrapping="Wrap" Text="Password" TextAlignment="Center" Foreground="White"/>
-            <TextBox x:ConnectionId='8' x:Name="PasswordBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
+            <PasswordBox x:ConnectionId='8' x:Name="PasswordBox" Width="200"/>
             <TextBlock x:ConnectionId='9' x:Name="ConfirmPasswordBlock" TextWrapping="Wrap" Text="Confirm Password" TextAlignment="Center" Foreground="White"/>
-            <TextBox x:ConnectionId='10' x:Name="ConfirmPasswordBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
+            <PasswordBox x:ConnectionId='10' x:Name="ConfirmPasswordBox" Width="200"/>
             <HyperlinkButton x:ConnectionId='11' Margin="10" x:Name="RegisterButton" Content="Register" HorizontalAlignment="Center" Width="200" VerticalAlignment="Stretch" Background="White"                             />
         </StackPanel>
     </Grid>
 </Page>
+
 

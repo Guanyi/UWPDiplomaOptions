@@ -16,10 +16,11 @@
             <TextBlock x:Name="EmailBlock" TextWrapping="Wrap" Text="Email" TextAlignment="Center" Foreground="White"/>
             <TextBox x:Name="EmailBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
             <TextBlock x:Name="PasswordBlock" TextWrapping="Wrap" Text="Password" TextAlignment="Center" Foreground="White"/>
-            <TextBox x:Name="PasswordBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
+            <PasswordBox x:Name="PasswordBox" Width="200"/>
             <TextBlock x:Name="ConfirmPasswordBlock" TextWrapping="Wrap" Text="Confirm Password" TextAlignment="Center" Foreground="White"/>
-            <TextBox x:Name="ConfirmPasswordBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
+            <PasswordBox x:Name="ConfirmPasswordBox" Width="200"/>
             <HyperlinkButton Margin="10" x:Name="RegisterButton" Content="Register" HorizontalAlignment="Center" Width="200" VerticalAlignment="Stretch" Background="White" Click="RegisterButton_Click"/>
         </StackPanel>
     </Grid>
 </Page>
+
