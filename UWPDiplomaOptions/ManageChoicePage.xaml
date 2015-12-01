@@ -84,7 +84,7 @@
                 </ListView.ItemTemplate>
             </ListView>
         </ScrollViewer>
-        <TextBox Grid.Row="3" Grid.Column="0" Name="txtId" PlaceholderText="ID" />
+        <TextBox Grid.Row="3" Grid.Column="0" Name="txtId" PlaceholderText="ID" IsReadOnly="True"/>
         <TextBox Grid.Row="3" Grid.Column="1" Name="txtStudentId" PlaceholderText="Student ID" />
         <TextBox Grid.Row="3" Grid.Column="2" Name="txtFName" PlaceholderText="First Name" />
         <TextBox Grid.Row="3" Grid.Column="3" Name="txtLName" PlaceholderText="Last Name" />

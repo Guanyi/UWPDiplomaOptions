@@ -89,7 +89,7 @@ namespace UWPDiplomaOptions
                 selectionDate = Choices.Where(c => c.ChoiceId == Convert.ToInt16(id)).Select(c => c).FirstOrDefault().SelectionDate;
 
                 var choice = new Choice() { ChoiceId = id, StudentId = studentId, StudentFirstName = fName, StudentLastName = lName, FirstChoiceOptionTitle = cbFirstChoice.SelectedValue.ToString(), SecondChoiceOptionTitle = cbSecondChoice.SelectedValue.ToString(), ThirdChoiceOptionTitle = cbThirdChoice.SelectedValue.ToString(), FourthChoiceOptionTitle = cbFourthChoice.SelectedValue.ToString(), Year = Convert.ToInt16(cbYear.SelectedValue), Term = Convert.ToInt16(cbTerm.SelectedValue), SelectionDate = selectionDate };
-                var obj = new { StudentId = studentId, StudentFirstName = fName, StudentLastName = lName, FirstChoiceOptionId = firstChoice, SecondChoiceOptionId = secondChoice, ThirdChoiceOptionId = thirdChoice, FourthChoiceOptionId = fourthChoice, YearTermId = yearTerm, SelectionDate = selectionDate };
+                var obj = new { ChoiceId = id, StudentId = studentId, StudentFirstName = fName, StudentLastName = lName, FirstChoiceOptionId = firstChoice, SecondChoiceOptionId = secondChoice, ThirdChoiceOptionId = thirdChoice, FourthChoiceOptionId = fourthChoice, YearTermId = yearTerm, SelectionDate = selectionDate };
 
                 await ChoiceManager.EditChoice(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), choice, Choices);
             }
