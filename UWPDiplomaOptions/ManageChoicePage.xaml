@@ -29,7 +29,7 @@
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="8*"/>
-            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="7*"/>
         </Grid.ColumnDefinitions>
 
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Id" HorizontalAlignment="Center" />
@@ -61,7 +61,7 @@
                             <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="8*"/>
-                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="7*"/>
                         </Grid.ColumnDefinitions>
                         
                         <TextBlock Grid.Column="0" Text="{x:Bind ChoiceId}" FontSize="15" HorizontalAlignment="Center"/>
@@ -75,11 +75,16 @@
                         <TextBlock Grid.Column="8" Text="{x:Bind Year}" FontSize="15" HorizontalAlignment="Center"/>
                         <TextBlock Grid.Column="9" Text="{x:Bind Term}" FontSize="15" HorizontalAlignment="Center"/>
                         <TextBlock Grid.Column="10" Text="{x:Bind SelectionDate}" FontSize="15" HorizontalAlignment="Center"/>
-                        <Button Grid.Column="11" Content="Delete" Name="{x:Bind ChoiceId}" Click="Button_Click"/>
-                    </Grid >
+                        <StackPanel Orientation="Horizontal" Grid.Column="11">
+                            <Button Content="Edit" Name="{x:Bind ChoiceId}" Click="Button_Click_1"/>
+                            <Button Content="Delete" Name="{x:Bind ChoiceId}" Click="Button_Click"/>
+                        </StackPanel>
+                        </Grid >
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+            
         </ScrollViewer>
+        
     </Grid>
 </Page>
