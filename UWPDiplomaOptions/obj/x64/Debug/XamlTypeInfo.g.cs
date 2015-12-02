@@ -67,6 +67,18 @@ namespace UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo
             {
                 xamlType = CreateXamlType(typeIndex);
             }
+            var userXamlType = xamlType as global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlUserType;
+            if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
+            {
+                global::Windows.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForType(type);
+                if (libXamlType != null)
+                {
+                    if(libXamlType.IsConstructible || xamlType == null)
+                    {
+                        xamlType = libXamlType;
+                    }
+                }
+            }
             if (xamlType != null)
             {
                 _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
@@ -90,6 +102,18 @@ namespace UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo
             if(typeIndex != -1)
             {
                 xamlType = CreateXamlType(typeIndex);
+            }
+            var userXamlType = xamlType as global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlUserType;
+            if(xamlType == null || (userXamlType != null && userXamlType.IsReturnTypeStub && !userXamlType.IsLocalType))
+            {
+                global::Windows.UI.Xaml.Markup.IXamlType libXamlType = CheckOtherMetadataProvidersForName(typeName);
+                if (libXamlType != null)
+                {
+                    if(libXamlType.IsConstructible || xamlType == null)
+                    {
+                        xamlType = libXamlType;
+                    }
+                }
             }
             if (xamlType != null)
             {
@@ -132,7 +156,7 @@ namespace UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[11];
+            _typeNameTable = new string[12];
             _typeNameTable[0] = "UWPDiplomaOptions.HomePage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
@@ -140,12 +164,13 @@ namespace UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo
             _typeNameTable[4] = "UWPDiplomaOptions.MainPage";
             _typeNameTable[5] = "UWPDiplomaOptions.ManageChoicePage";
             _typeNameTable[6] = "UWPDiplomaOptions.ManageOptionPage";
-            _typeNameTable[7] = "UWPDiplomaOptions.ManageUserPage";
-            _typeNameTable[8] = "UWPDiplomaOptions.ManageUserRolePage";
-            _typeNameTable[9] = "UWPDiplomaOptions.ManageYearTermPage";
-            _typeNameTable[10] = "UWPDiplomaOptions.RegisterPage";
+            _typeNameTable[7] = "String";
+            _typeNameTable[8] = "UWPDiplomaOptions.ManageUserPage";
+            _typeNameTable[9] = "UWPDiplomaOptions.ManageUserRolePage";
+            _typeNameTable[10] = "UWPDiplomaOptions.ManageYearTermPage";
+            _typeNameTable[11] = "UWPDiplomaOptions.RegisterPage";
 
-            _typeTable = new global::System.Type[11];
+            _typeTable = new global::System.Type[12];
             _typeTable[0] = typeof(global::UWPDiplomaOptions.HomePage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
@@ -153,10 +178,11 @@ namespace UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo
             _typeTable[4] = typeof(global::UWPDiplomaOptions.MainPage);
             _typeTable[5] = typeof(global::UWPDiplomaOptions.ManageChoicePage);
             _typeTable[6] = typeof(global::UWPDiplomaOptions.ManageOptionPage);
-            _typeTable[7] = typeof(global::UWPDiplomaOptions.ManageUserPage);
-            _typeTable[8] = typeof(global::UWPDiplomaOptions.ManageUserRolePage);
-            _typeTable[9] = typeof(global::UWPDiplomaOptions.ManageYearTermPage);
-            _typeTable[10] = typeof(global::UWPDiplomaOptions.RegisterPage);
+            _typeTable[7] = typeof(global::System.String);
+            _typeTable[8] = typeof(global::UWPDiplomaOptions.ManageUserPage);
+            _typeTable[9] = typeof(global::UWPDiplomaOptions.ManageUserRolePage);
+            _typeTable[10] = typeof(global::UWPDiplomaOptions.ManageYearTermPage);
+            _typeTable[11] = typeof(global::UWPDiplomaOptions.RegisterPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -196,10 +222,10 @@ namespace UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo
         private object Activate_4_MainPage() { return new global::UWPDiplomaOptions.MainPage(); }
         private object Activate_5_ManageChoicePage() { return new global::UWPDiplomaOptions.ManageChoicePage(); }
         private object Activate_6_ManageOptionPage() { return new global::UWPDiplomaOptions.ManageOptionPage(); }
-        private object Activate_7_ManageUserPage() { return new global::UWPDiplomaOptions.ManageUserPage(); }
-        private object Activate_8_ManageUserRolePage() { return new global::UWPDiplomaOptions.ManageUserRolePage(); }
-        private object Activate_9_ManageYearTermPage() { return new global::UWPDiplomaOptions.ManageYearTermPage(); }
-        private object Activate_10_RegisterPage() { return new global::UWPDiplomaOptions.RegisterPage(); }
+        private object Activate_8_ManageUserPage() { return new global::UWPDiplomaOptions.ManageUserPage(); }
+        private object Activate_9_ManageUserRolePage() { return new global::UWPDiplomaOptions.ManageUserRolePage(); }
+        private object Activate_10_ManageYearTermPage() { return new global::UWPDiplomaOptions.ManageYearTermPage(); }
+        private object Activate_11_RegisterPage() { return new global::UWPDiplomaOptions.RegisterPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -250,34 +276,39 @@ namespace UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo
             case 6:   //  UWPDiplomaOptions.ManageOptionPage
                 userType = new global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_6_ManageOptionPage;
+                userType.AddMemberName("AccessToken");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  UWPDiplomaOptions.ManageUserPage
+            case 7:   //  String
+                xamlType = new global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 8:   //  UWPDiplomaOptions.ManageUserPage
                 userType = new global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_ManageUserPage;
+                userType.Activator = Activate_8_ManageUserPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  UWPDiplomaOptions.ManageUserRolePage
+            case 9:   //  UWPDiplomaOptions.ManageUserRolePage
                 userType = new global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_ManageUserRolePage;
+                userType.Activator = Activate_9_ManageUserRolePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  UWPDiplomaOptions.ManageYearTermPage
+            case 10:   //  UWPDiplomaOptions.ManageYearTermPage
                 userType = new global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_ManageYearTermPage;
+                userType.Activator = Activate_10_ManageYearTermPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  UWPDiplomaOptions.RegisterPage
+            case 11:   //  UWPDiplomaOptions.RegisterPage
                 userType = new global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_RegisterPage;
+                userType.Activator = Activate_11_RegisterPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -285,12 +316,88 @@ namespace UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo
             return xamlType;
         }
 
+        private global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider> _otherProviders;
+        private global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider> OtherProviders
+        {
+            get
+            {
+                if(_otherProviders == null)
+                {
+                    var otherProviders = new global::System.Collections.Generic.List<global::Windows.UI.Xaml.Markup.IXamlMetadataProvider>();
+                    global::Windows.UI.Xaml.Markup.IXamlMetadataProvider provider;
+                    provider = new global::WinRTXamlToolkit.Controls.DataVisualization.WinRTXamlToolkit_Controls_DataVisualization_UWP_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
+                    otherProviders.Add(provider); 
+                    provider = new global::WinRTXamlToolkit.WinRTXamlToolkit_UWP_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
+                    otherProviders.Add(provider); 
+                    _otherProviders = otherProviders;
+                }
+                return _otherProviders;
+            }
+        }
 
+        private global::Windows.UI.Xaml.Markup.IXamlType CheckOtherMetadataProvidersForName(string typeName)
+        {
+            global::Windows.UI.Xaml.Markup.IXamlType xamlType = null;
+            global::Windows.UI.Xaml.Markup.IXamlType foundXamlType = null;
+            foreach(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider xmp in OtherProviders)
+            {
+                xamlType = xmp.GetXamlType(typeName);
+                if(xamlType != null)
+                {
+                    if(xamlType.IsConstructible)    // not Constructible means it might be a Return Type Stub
+                    {
+                        return xamlType;
+                    }
+                    foundXamlType = xamlType;
+                }
+            }
+            return foundXamlType;
+        }
+
+        private global::Windows.UI.Xaml.Markup.IXamlType CheckOtherMetadataProvidersForType(global::System.Type type)
+        {
+            global::Windows.UI.Xaml.Markup.IXamlType xamlType = null;
+            global::Windows.UI.Xaml.Markup.IXamlType foundXamlType = null;
+            foreach(global::Windows.UI.Xaml.Markup.IXamlMetadataProvider xmp in OtherProviders)
+            {
+                xamlType = xmp.GetXamlType(type);
+                if(xamlType != null)
+                {
+                    if(xamlType.IsConstructible)    // not Constructible means it might be a Return Type Stub
+                    {
+                        return xamlType;
+                    }
+                    foundXamlType = xamlType;
+                }
+            }
+            return foundXamlType;
+        }
+
+        private object get_0_ManageOptionPage_AccessToken(object instance)
+        {
+            var that = (global::UWPDiplomaOptions.ManageOptionPage)instance;
+            return that.AccessToken;
+        }
+        private void set_0_ManageOptionPage_AccessToken(object instance, object Value)
+        {
+            var that = (global::UWPDiplomaOptions.ManageOptionPage)instance;
+            that.AccessToken = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "UWPDiplomaOptions.ManageOptionPage.AccessToken":
+                userType = (global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlUserType)GetXamlTypeByName("UWPDiplomaOptions.ManageOptionPage");
+                xamlMember = new global::UWPDiplomaOptions.UWPDiplomaOptions_XamlTypeInfo.XamlMember(this, "AccessToken", "String");
+                xamlMember.Getter = get_0_ManageOptionPage_AccessToken;
+                xamlMember.Setter = set_0_ManageOptionPage_AccessToken;
+                break;
+            }
             return xamlMember;
         }
     }

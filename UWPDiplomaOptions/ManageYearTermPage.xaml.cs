@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using UWPDiplomaOptions.Models;
@@ -36,6 +37,9 @@ namespace UWPDiplomaOptions
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            var obj = App.Current as App;
+            //AccessToken = obj.AccessToken;
+            YearTermManager.http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", obj.AccessToken);
             await YearTermManager.GetYearTerms(YearTerms);
         }
 

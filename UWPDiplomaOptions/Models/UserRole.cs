@@ -22,30 +22,37 @@ namespace UWPDiplomaOptions.Models
 
     public class UserRoleManager
     {
+        public static HttpClient http = new HttpClient();
         public static async Task GetUserRoles(ObservableCollection<UserRole> UserRoleList)
         {
-            var http = new HttpClient();
             var response = await http.GetAsync("http://uwproject.feifei.ca/api/ApplicationRoles");
-            var result = await response.Content.ReadAsStringAsync();
-
-            JsonValue value = JsonValue.Parse(result);
-            JsonArray root = value.GetArray();
-            for (uint i = 0; i < root.Count; i++)
+            if (response.IsSuccessStatusCode)
             {
-                string id = root.GetObjectAt(i).GetNamedString("Id");
-                string name = root.GetObjectAt(i).GetNamedString("Name");
-                var userRole = new UserRole
+                var result = await response.Content.ReadAsStringAsync();
+
+                JsonValue value = JsonValue.Parse(result);
+                JsonArray root = value.GetArray();
+                for (uint i = 0; i < root.Count; i++)
                 {
-                    Id = id,
-                    Name = name
-                };
-                UserRoleList.Add(userRole);
+                    string id = root.GetObjectAt(i).GetNamedString("Id");
+                    string name = root.GetObjectAt(i).GetNamedString("Name");
+                    var userRole = new UserRole
+                    {
+                        Id = id,
+                        Name = name
+                    };
+                    UserRoleList.Add(userRole);
+                }
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot retrieve any record");
+                await dialog.ShowAsync();
             }
         }
 
         public static async Task AddUserRole(StringContent userRoleJson, ObservableCollection<UserRole> UserRoleList)
         {
-            var http = new HttpClient();
             var response = await http.PostAsync("http://uwproject.feifei.ca/api/ApplicationRoles", userRoleJson);
 
             if (response.IsSuccessStatusCode)
@@ -64,7 +71,6 @@ namespace UWPDiplomaOptions.Models
 
         public static async Task EditUserRole(StringContent optionJsonToBeEdited, UserRole updatedUserRole, ObservableCollection<UserRole> UserRoleList)
         {
-            var http = new HttpClient();
             string requestUri = "http://uwproject.feifei.ca/api/ApplicationRoles/" + updatedUserRole.Id;
             var response = await http.PutAsync(requestUri, optionJsonToBeEdited);
 
@@ -83,7 +89,6 @@ namespace UWPDiplomaOptions.Models
 
         public static async Task DeleteUserRole(string idToBeDeleted, ObservableCollection<UserRole> UserRoleList)
         {
-            var http = new HttpClient();
             var response = await http.DeleteAsync("http://uwproject.feifei.ca/api/ApplicationRoles/" + idToBeDeleted);
 
             if (response.IsSuccessStatusCode)

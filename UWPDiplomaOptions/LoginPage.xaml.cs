@@ -56,15 +56,18 @@ namespace UWPDiplomaOptions
                 LoginProessRing.Visibility = Visibility.Visible;
 
                 var response = await http.PostAsync("http://uwproject.feifei.ca/token", new FormUrlEncodedContent(loginCredential));
-
                 LoginProessRing.IsActive = false;
                 LoginProessRing.Visibility = Visibility.Collapsed;
 
                 if (response.IsSuccessStatusCode)
                 {
                     var result = await response.Content.ReadAsStringAsync();
-                    JsonValue value = JsonValue.Parse(result);
-                    var authorizedUser = JsonConvert.DeserializeObject(value.ToString());
+                    var jObject = JsonObject.Parse(result);
+                    string token = jObject.GetNamedString("access_token");
+
+                    var obj = App.Current as App;
+                    obj.AccessToken = token;
+
                     Frame.Navigate(typeof(HomePage));
                 }
                 else

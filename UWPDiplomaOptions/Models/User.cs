@@ -26,34 +26,41 @@ namespace UWPDiplomaOptions.Models
 
     public class UserManager
     {
+        public static HttpClient http = new HttpClient();
         public static async Task GetUsers(ObservableCollection<User> UserList)
         {
-            var http = new HttpClient();
             var response = await http.GetAsync("http://uwproject.feifei.ca/api/ApplicationUsers");
-            var result = await response.Content.ReadAsStringAsync();
-
-            JsonValue value = JsonValue.Parse(result);
-            JsonArray root = value.GetArray();
-            for (uint i = 0; i < root.Count; i++)
+            if (response.IsSuccessStatusCode)
             {
-                string id = root.GetObjectAt(i).GetNamedString("Id");
-                string userName = root.GetObjectAt(i).GetNamedString("UserName");
-                bool lockout = root.GetObjectAt(i).GetNamedBoolean("LockoutEnabled");
-                string role = root.GetObjectAt(i).GetNamedString("RoleName");
-                var user = new User
+                var result = await response.Content.ReadAsStringAsync();
+
+                JsonValue value = JsonValue.Parse(result);
+                JsonArray root = value.GetArray();
+                for (uint i = 0; i < root.Count; i++)
                 {
-                    Id = id,
-                    UserName = userName,
-                    LockoutEnabled = lockout,
-                    RoleName = role
-                };
-                UserList.Add(user);
+                    string id = root.GetObjectAt(i).GetNamedString("Id");
+                    string userName = root.GetObjectAt(i).GetNamedString("UserName");
+                    bool lockout = root.GetObjectAt(i).GetNamedBoolean("LockoutEnabled");
+                    string role = root.GetObjectAt(i).GetNamedString("RoleName");
+                    var user = new User
+                    {
+                        Id = id,
+                        UserName = userName,
+                        LockoutEnabled = lockout,
+                        RoleName = role
+                    };
+                    UserList.Add(user);
+                }
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot retrieve any record");
+                await dialog.ShowAsync();
             }
         }
 
         public static async Task DeleteUser(string idToBeDeleted, ObservableCollection<User> UsersList)
         {
-            var http = new HttpClient();
             var response = await http.DeleteAsync("http://uwproject.feifei.ca/api/ApplicationUsers/" + idToBeDeleted);
 
             if (response.IsSuccessStatusCode)
@@ -71,7 +78,6 @@ namespace UWPDiplomaOptions.Models
         }
         public static async Task AddUser(StringContent json, ObservableCollection<User> UserList)
         {
-            var http = new HttpClient();
             var response = await http.PostAsync("http://uwproject.feifei.ca/api/Account/Register", json);
 
             if (response.IsSuccessStatusCode)
