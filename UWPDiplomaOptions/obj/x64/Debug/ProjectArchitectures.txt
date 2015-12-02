@@ -1,1 +1,1 @@
-C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\UWPDiplomaOptions.csproj;x64
+C:\Users\Shane\Desktop\UWPDiplomaOptions-master\UWPDiplomaOptions\UWPDiplomaOptions.csproj;x64

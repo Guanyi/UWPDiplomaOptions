@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Serialization.Json;
 using System.Text;
@@ -31,6 +32,7 @@ namespace UWPDiplomaOptions
     public sealed partial class ManageOptionPage : Page
     {
         public ObservableCollection<Option> Options;
+        public string AccessToken { get; set; }
         public ManageOptionPage()
         {
             Options = new ObservableCollection<Option>();
@@ -69,11 +71,14 @@ namespace UWPDiplomaOptions
             }
         }
 
-        private async void Page_Loading(FrameworkElement sender, object args)
+        private async void Page_Loading(FrameworkElement sender, object accessToken)
         {
             OptionLoadingProessRing.IsActive = true;
             OptionLoadingProessRing.Visibility = Visibility.Visible;
 
+            var obj = App.Current as App;
+            AccessToken = obj.AccessToken;
+            OptionManager.http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", obj.AccessToken);
             await OptionManager.GetOptions(Options);
 
             OptionLoadingProessRing.IsActive = false;

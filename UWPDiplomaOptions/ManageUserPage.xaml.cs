@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UWPDiplomaOptions.Models;
 using Windows.Foundation;
@@ -34,6 +35,9 @@ namespace UWPDiplomaOptions
 
         private async void Page_Loading(FrameworkElement sender, object args)
         {
+            var obj = App.Current as App;
+            //AccessToken = obj.AccessToken;
+            UserManager.http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", obj.AccessToken);
             await UserManager.GetUsers(Users);
         }
 

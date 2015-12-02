@@ -1,12 +1,14 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
+using UWPDiplomaOptions.Models;
 using Windows.Data.Json;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -27,13 +29,17 @@ namespace UWPDiplomaOptions
     /// </summary>
     public sealed partial class LoginPage : Page
     {
+        public ObservableCollection<User> Users;
         public LoginPage()
         {
+            Users = new ObservableCollection<User>();
             this.InitializeComponent();
         }
 
         private async void LoginButton_Click(object sender, RoutedEventArgs e)
         {
+            var obj = App.Current as App;
+            obj.roleToken = "";
             string loginName = StudentNumberBox.Text;
             if (loginName == "" || loginName.Length != 9 || !loginName.StartsWith("A00") || PasswordBox.Password == "")
             {
@@ -56,16 +62,36 @@ namespace UWPDiplomaOptions
                 LoginProessRing.Visibility = Visibility.Visible;
 
                 var response = await http.PostAsync("http://uwproject.feifei.ca/token", new FormUrlEncodedContent(loginCredential));
-
                 LoginProessRing.IsActive = false;
                 LoginProessRing.Visibility = Visibility.Collapsed;
 
                 if (response.IsSuccessStatusCode)
                 {
                     var result = await response.Content.ReadAsStringAsync();
-                    JsonValue value = JsonValue.Parse(result);
-                    var authorizedUser = JsonConvert.DeserializeObject(value.ToString());
-                    Frame.Navigate(typeof(HomePage));
+                    var jObject = JsonObject.Parse(result);
+                    string token = jObject.GetNamedString("access_token");
+
+                    obj.AccessToken = token;
+                    UserManager.http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", obj.AccessToken);
+
+                    await UserManager.GetUsers(Users);
+
+                    foreach (var userLogin in Users)
+                    {
+                        if (userLogin.UserName == loginName)
+                        {
+                            obj.roleToken = userLogin.RoleName;
+                        }
+                    }
+
+                    if (obj.roleToken == "Student")
+                    {
+                        Frame.Navigate(typeof(HomePage));
+                    }
+                    else if (obj.roleToken == "Admin")
+                    {
+                        Frame.Navigate(typeof(ManageChoicePage));
+                    }
                 }
                 else
                 {

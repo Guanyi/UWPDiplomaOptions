@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using UWPDiplomaOptions.Models;
@@ -42,6 +43,11 @@ namespace UWPDiplomaOptions
 
         private async void Page_Loading(FrameworkElement sender, object args)
         {
+            var obj = App.Current as App;
+            YearTermManager.http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", obj.AccessToken);
+            OptionManager.http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", obj.AccessToken);
+            ChoiceManager.http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", obj.AccessToken);
+
             await ChoiceManager.GetChoices(Choices);
             await OptionManager.GetOptions(Options);
             await YearTermManager.GetYearTerms(YearTerms);

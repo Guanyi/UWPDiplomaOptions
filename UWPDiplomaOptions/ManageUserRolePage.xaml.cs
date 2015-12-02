@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using UWPDiplomaOptions.Models;
@@ -68,6 +69,9 @@ namespace UWPDiplomaOptions
         {
             UserRoleLoadingProessRing.IsActive = true;
             UserRoleLoadingProessRing.Visibility = Visibility.Visible;
+            var obj = App.Current as App;
+            //AccessToken = obj.AccessToken;
+            UserRoleManager.http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", obj.AccessToken);
             await UserRoleManager.GetUserRoles(UserRoles);
             UserRoleLoadingProessRing.IsActive = false;
             UserRoleLoadingProessRing.Visibility = Visibility.Collapsed;
