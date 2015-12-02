@@ -1453,6 +1453,7 @@ C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplo
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x64\Debug\Core\WinRTXamlToolkit\WinRTXamlToolkit.xr.xml
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x64\Debug\Core\WinRTXamlToolkit\Properties\WinRTXamlToolkit.UWP.rd.xml
 C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x64\Debug\Core\resources.pri
+<<<<<<< HEAD
 C:\Users\Shane\Desktop\UWPDiplomaOptions-master\UWPDiplomaOptions\bin\x64\Debug\ApplicationInsights.config
 C:\Users\Shane\Desktop\UWPDiplomaOptions-master\UWPDiplomaOptions\bin\x64\Debug\App.xbf
 C:\Users\Shane\Desktop\UWPDiplomaOptions-master\UWPDiplomaOptions\bin\x64\Debug\HomePage.xbf
@@ -1950,3 +1951,5 @@ C:\Users\Shane\Desktop\UWPDiplomaOptions-master\UWPDiplomaOptions\obj\x64\Debug\
 C:\Users\Shane\Desktop\UWPDiplomaOptions-master\UWPDiplomaOptions\obj\x64\Debug\Core\WinRTXamlToolkit\WinRTXamlToolkit.xr.xml
 C:\Users\Shane\Desktop\UWPDiplomaOptions-master\UWPDiplomaOptions\obj\x64\Debug\Core\WinRTXamlToolkit\Properties\WinRTXamlToolkit.UWP.rd.xml
 C:\Users\Shane\Desktop\UWPDiplomaOptions-master\UWPDiplomaOptions\obj\x64\Debug\Core\resources.pri
+=======
+>>>>>>> c9c33172a8f1f2297da6e3e0e17f1fa7c4916895
