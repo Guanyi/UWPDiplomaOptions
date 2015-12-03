@@ -9,9 +9,12 @@
 
     <Grid Background="#0078D7" HorizontalAlignment="Center">
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>    <!-- header -->
-            <RowDefinition Height="Auto"/>  <!-- Table header row -->
-            <RowDefinition Height="Auto"/>  <!-- Table-->
+            <RowDefinition Height="40"/>
+            <!-- header -->
+            <RowDefinition Height="Auto"/>
+            <!-- Table header row -->
+            <RowDefinition Height="Auto"/>
+            <!-- Table-->
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -19,15 +22,16 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="1*"/>   <!-- checkbox -->
-            <ColumnDefinition Width="2*"/>   <!-- OptionId -->
-            <ColumnDefinition Width="4*"/>   <!-- Title    -->
+            <ColumnDefinition Width="1*"/>
+            <!-- checkbox -->
+            <ColumnDefinition Width="2*"/>
+            <!-- OptionId -->
+            <ColumnDefinition Width="4*"/>
+            <!-- Title    -->
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Check" HorizontalAlignment="Center" />
-        <TextBlock Grid.Row="1" Grid.Column="2" Text="Id" HorizontalAlignment="Center" />
-        <TextBlock Grid.Row="1" Grid.Column="3" Text="Name" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Id" HorizontalAlignment="Center" Margin="55,0,165,0" />
+        <TextBlock Grid.Column="3" Text="Name" HorizontalAlignment="Center" RenderTransformOrigin="-4.408,0.5" Margin="45,35,380,5" Grid.RowSpan="2" />
 
 
         <ListView ItemsSource="{x:Bind UserRoles}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
@@ -38,10 +42,11 @@
                             <ColumnDefinition Width="1*"/>
                             <ColumnDefinition Width="2*"/>
                             <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="2*"/>
                         </Grid.ColumnDefinitions>
-                        <CheckBox Grid.Column="0" HorizontalAlignment="Center"/>
                         <TextBlock Grid.Column="1" Text="{x:Bind Id}" FontSize="18.667" HorizontalAlignment="Center"/>
                         <TextBlock Grid.Column="2" Text="{x:Bind Name}" FontSize="18.667" HorizontalAlignment="Center"/>
+                        <Button Grid.Column="3" Content="Delete" Tag="{x:Bind Id}" Click="DeleteUserRole_Click"/>
                     </Grid >
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -54,9 +59,6 @@
         <Button Grid.Row="4"  Grid.Column="1" Name="EditUserRole" Content="Edit Role" HorizontalAlignment="Center" Click="EditUserRole_Click"/>
         <TextBox Grid.Row="4" Grid.Column="2" Name="UserRoleIdWillBeEdited" PlaceholderText="Enter role Id to edit" />
         <TextBox Grid.Row="4"  Grid.Column="3" Name="UserRoleNameWillBeEdited" PlaceholderText="New role name" />
-        
-        <Button Grid.Row="5"  Grid.Column="1" Name="DeleteUserRole" Content="Delete Role" HorizontalAlignment="Center" Click="DeleteUserRole_Click"/>
-        <TextBox Grid.Row="5" Grid.Column="2" Name="UserRoleIdWillBeDeleted" PlaceholderText="Enter role Id to delete" />
 
         <ProgressRing Grid.Row="3" Grid.Column="2" Name="UserRoleLoadingProessRing" Width="40" Height="40" />
     </Grid>

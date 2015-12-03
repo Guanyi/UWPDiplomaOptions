@@ -50,6 +50,7 @@ namespace UWPDiplomaOptions
             bool isDefault = ((string)YearTermIsDefaultWillBeAdded.SelectionBoxItem == "Yes") ? true : false;
             var obj = new { Year = year, Term = term, IsDefault = isDefault };
             await YearTermManager.AddYearTerm(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), YearTerms);
+            Frame.Navigate(typeof(ManageYearTermPage));
         }
 
         private async void EditYearTerm_Click(object sender, RoutedEventArgs e)
@@ -62,6 +63,7 @@ namespace UWPDiplomaOptions
                 bool isDefault = ((string)YearTermIsDefaultWillBeEdited.SelectionBoxItem == "Yes") ? true : false;
                 var obj = new YearTerm() { YearTermId = id, Year = year, Term = term, IsDefault = isDefault };
                 await YearTermManager.EditYearTerm(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), obj, YearTerms);
+                Frame.Navigate(typeof(ManageYearTermPage));
             }
         }
 
@@ -71,6 +73,7 @@ namespace UWPDiplomaOptions
             if (YearTermIdWillBeDeleted.Text != "" && Int32.TryParse(YearTermIdWillBeDeleted.Text, out id))
             {
                 await YearTermManager.DeleteYearTerm(id.ToString(), YearTerms);
+                Frame.Navigate(typeof(ManageYearTermPage));
             }
  
         }

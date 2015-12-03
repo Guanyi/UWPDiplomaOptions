@@ -46,6 +46,7 @@ namespace UWPDiplomaOptions
             var button = (Button)sender;
             string id = button.Tag.ToString();
             await UserManager.DeleteUser(id, Users);
+            Frame.Navigate(typeof(ManageUserPage));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

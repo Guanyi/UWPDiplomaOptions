@@ -47,6 +47,7 @@ namespace UWPDiplomaOptions
                 string title = OptionTitleWillBeAdded.Text;
                 var obj = new { Title = title, IsActive = active };
                 await OptionManager.AddOption(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), Options);
+                Frame.Navigate(typeof(ManageOptionPage));
             }
         }
 
@@ -56,6 +57,7 @@ namespace UWPDiplomaOptions
             {
                 string id = OptionIdWillBeDeleted.Text;
                 await OptionManager.DeleteOption(id, Options);
+                Frame.Navigate(typeof(ManageOptionPage));
             }
         }
 
@@ -68,6 +70,7 @@ namespace UWPDiplomaOptions
                 bool active = ((string)OptionActiveWillBeEdited.SelectionBoxItem == "Yes") ? true : false;
                 var obj = new Option() { OptionId = id, Title = title, IsActive = active };
                 await OptionManager.EditOption(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), obj, Options);
+                Frame.Navigate(typeof(ManageOptionPage));
             }
         }
 

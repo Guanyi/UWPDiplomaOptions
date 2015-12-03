@@ -42,6 +42,7 @@ namespace UWPDiplomaOptions
                 string name = UserRoleNameWillBeAdded.Text;
                 var obj = new { Name = name };
                 await UserRoleManager.AddUserRole(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), UserRoles);
+                Frame.Navigate(typeof(ManageUserRolePage));
             }
         }
 
@@ -53,16 +54,14 @@ namespace UWPDiplomaOptions
                 string name = UserRoleNameWillBeEdited.Text;
                 var userRole = new UserRole() { Id = id.ToString(), Name = name};
                 await UserRoleManager.EditUserRole(new StringContent(JsonConvert.SerializeObject(userRole), Encoding.UTF8, "application/json"), userRole, UserRoles);
+                Frame.Navigate(typeof(ManageUserRolePage));
             }
         }
 
         private async void DeleteUserRole_Click(object sender, RoutedEventArgs e)
         {
-            if (UserRoleIdWillBeDeleted.Text != "")
-            {
-                string id = UserRoleIdWillBeDeleted.Text;
-                await UserRoleManager.DeleteUserRole(id, UserRoles);
-            }
+            await UserRoleManager.DeleteUserRole((String)((Button)sender).Tag, UserRoles);
+            Frame.Navigate(typeof(ManageUserRolePage));
         }
 
         private async void Page_Loading(FrameworkElement sender, object args)
@@ -75,6 +74,11 @@ namespace UWPDiplomaOptions
             await UserRoleManager.GetUserRoles(UserRoles);
             UserRoleLoadingProessRing.IsActive = false;
             UserRoleLoadingProessRing.Visibility = Visibility.Collapsed;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -37,7 +37,7 @@ namespace UWPDiplomaOptions.Models
                 for (uint i = 0; i < root.Count; i++)
                 {
                     int optionId = (int)root.GetObjectAt(i).GetNamedNumber("OptionId");
-                    string title = root.GetObjectAt(i).GetNamedString("Titles");
+                    string title = root.GetObjectAt(i).GetNamedString("Title");
                     bool isActive = root.GetObjectAt(i).GetNamedBoolean("IsActive");
                     var option = new Option
                     {
