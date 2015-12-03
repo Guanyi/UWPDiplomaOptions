@@ -1,14 +1,100 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="UWPDiplomaOptions.ManageChoicePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:UWPDiplomaOptions"
+    xmlns:local="using:UWPDiplomaOptions.Models"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"                       >
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#0078D7" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/> <!-- header -->
+            <RowDefinition Height="Auto"/><!-- Table header row -->
+            <RowDefinition Height="Auto"/><!-- Table-->
+            <RowDefinition Height="Auto"/><!-- Add-->
+            <RowDefinition Height="Auto"/><!-- Delete-->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
 
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Id" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Student Id" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="First Name" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="Last Name" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="4" Text="First Choice" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="5" Text="Second Choice" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="6" Text="Three Choice" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="7" Text="Fourth Choice" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="8" Text="Year" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="9" Text="Term" HorizontalAlignment="Center" />
+        <TextBlock Grid.Row="1" Grid.Column="10" Text="Selection Date" HorizontalAlignment="Center" />
+
+        <ScrollViewer Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="11" VerticalScrollBarVisibility="Visible">
+            <ListView x:ConnectionId='13'                                Height="600">
+                <ListView.ItemTemplate>
+                    <DataTemplate                          >
+                        <Grid x:ConnectionId='14' Background="Beige" Width="1280" HorizontalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="8*"/>
+                                <ColumnDefinition Width="7*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock x:ConnectionId='15' Grid.Column="0"                          FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='16' Grid.Column="1"                           FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='17' Grid.Column="2"                                  FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='18' Grid.Column="3"                                 FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='19' Grid.Column="4"                                        FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='20' Grid.Column="5"                                         FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='21' Grid.Column="6"                                        FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='22' Grid.Column="7"                                         FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='23' Grid.Column="8"                      FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='24' Grid.Column="9"                      FontSize="15" HorizontalAlignment="Center"/>
+                            <TextBlock x:ConnectionId='25' Grid.Column="10"                               FontSize="15" HorizontalAlignment="Center"/>
+                            <StackPanel Orientation="Horizontal" Grid.Column="11">
+                                <Button x:ConnectionId='26' Content="Edit"                                               />
+                                <Button x:ConnectionId='27' Content="Delete"                                             />
+                            </StackPanel>
+                        </Grid >
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
+        <TextBox x:ConnectionId='2' Grid.Row="3" Grid.Column="0" Name="txtId" PlaceholderText="ID" IsReadOnly="True"/>
+        <TextBox x:ConnectionId='3' Grid.Row="3" Grid.Column="1" Name="txtStudentId" PlaceholderText="Student ID" />
+        <TextBox x:ConnectionId='4' Grid.Row="3" Grid.Column="2" Name="txtFName" PlaceholderText="First Name" />
+        <TextBox x:ConnectionId='5' Grid.Row="3" Grid.Column="3" Name="txtLName" PlaceholderText="Last Name" />
+        <ComboBox x:ConnectionId='6' Grid.Row="3" Grid.Column="4" Name="cbFirstChoice" />
+        <ComboBox x:ConnectionId='7' Grid.Row="3" Grid.Column="5" Name="cbSecondChoice" />
+        <ComboBox x:ConnectionId='8' Grid.Row="3" Grid.Column="6" Name="cbThirdChoice" />
+        <ComboBox x:ConnectionId='9' Grid.Row="3" Grid.Column="7" Name="cbFourthChoice" />
+        <ComboBox x:ConnectionId='10' Grid.Row="3" Grid.Column="8" Name="cbYear" />
+        <ComboBox x:ConnectionId='11' Grid.Row="3" Grid.Column="9" Name="cbTerm" />
+        <Button x:ConnectionId='12' Grid.Row="3"  Grid.Column="10" Name="SaveButton" Content="Save" HorizontalAlignment="Center"                         />
     </Grid>
 </Page>
 

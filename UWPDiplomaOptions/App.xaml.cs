@@ -23,11 +23,8 @@ namespace UWPDiplomaOptions
     sealed partial class App : Application
     {
         public string AccessToken { get; set; }
-<<<<<<< HEAD
         public string roleToken { get; set; }
-=======
 
->>>>>>> c9c33172a8f1f2297da6e3e0e17f1fa7c4916895
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().

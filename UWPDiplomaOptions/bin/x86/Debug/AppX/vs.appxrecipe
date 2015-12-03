@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>ULTRA01</Machine>
-    <WindowsUser>Guanyi</WindowsUser>
+    <Machine>HELLSCREAM</Machine>
+    <WindowsUser>Goadah</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>e881960f-6656-40a5-a81d-234e03f2feee</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>7234327F680051703B5AA4264826F5B9C6EA6B29ACE50D21C1C5CFFA70C14922</RegisteredManifestChecksum>
+    <IntermediateOutputPath>C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\obj\x86\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>4AE58861C5D0D30280F4B90DD9F10BC865BA5107EB8F5E96248D12475B0BFBDC</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>e881960f-6656-40a5-a81d-234e03f2feee_1.0.0.0_x86__1kgpfjepab3y0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>e881960f-6656-40a5-a81d-234e03f2feee_1kgpfjepab3y0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>e881960f-6656-40a5-a81d-234e03f2feee</RegisteredPackageID>
@@ -19,501 +19,525 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-11-30T02:03:34.785</Modified>
+      <Modified>2015-12-03T01:17:02.586</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
-      <Modified>2015-11-24T20:59:36.000</Modified>
+      <Modified>2015-12-02T18:53:09.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-08-27T09:38:34.000</Modified>
+      <Modified>2015-12-02T18:53:09.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <Modified>2015-11-24T22:44:56.000</Modified>
+      <Modified>2015-12-02T18:53:09.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T09:38:34.000</Modified>
+      <Modified>2015-12-02T18:53:09.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T09:38:34.000</Modified>
+      <Modified>2015-12-02T18:53:09.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T09:38:34.000</Modified>
+      <Modified>2015-12-02T18:53:09.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T09:38:34.000</Modified>
+      <Modified>2015-12-02T18:53:09.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-08-27T09:38:34.000</Modified>
+      <Modified>2015-12-02T18:53:09.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\ClrCompression.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\ClrCompression.dll">
       <PackagePath>ClrCompression.dll</PackagePath>
-      <Modified>2015-11-25T23:23:05.180</Modified>
+      <Modified>2015-09-28T06:43:16.620</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\entrypoint\UWPDiplomaOptions.exe">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\entrypoint\UWPDiplomaOptions.exe">
       <PackagePath>entrypoint\UWPDiplomaOptions.exe</PackagePath>
-      <Modified>2015-11-30T02:03:34.300</Modified>
+      <Modified>2015-12-03T01:16:52.426</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.ApplicationInsights.dll">
       <PackagePath>Microsoft.ApplicationInsights.dll</PackagePath>
-      <Modified>2015-10-30T13:18:35.320</Modified>
+      <Modified>2015-09-28T06:42:47.476</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.ApplicationInsights.Extensibility.Windows.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.ApplicationInsights.Extensibility.Windows.dll">
       <PackagePath>Microsoft.ApplicationInsights.Extensibility.Windows.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.241</Modified>
+      <Modified>2015-09-28T06:42:48.151</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.ApplicationInsights.PersistenceChannel.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.ApplicationInsights.PersistenceChannel.dll">
       <PackagePath>Microsoft.ApplicationInsights.PersistenceChannel.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.176</Modified>
+      <Modified>2015-09-28T06:42:47.946</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.CSharp.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.530</Modified>
+      <Modified>2015-09-28T06:42:58.379</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.VisualBasic.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.VisualBasic.dll">
       <PackagePath>Microsoft.VisualBasic.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.568</Modified>
+      <Modified>2015-09-28T06:42:58.387</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.Win32.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Microsoft.Win32.Primitives.dll">
       <PackagePath>Microsoft.Win32.Primitives.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.116</Modified>
+      <Modified>2015-09-28T06:42:51.039</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2015-11-27T21:30:03.168</Modified>
+      <Modified>2015-11-29T00:49:05.055</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2015-11-24T20:58:34.000</Modified>
+      <Modified>2015-12-02T18:53:09.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-11-30T02:02:12.350</Modified>
+      <Modified>2015-12-03T01:16:56.352</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.AppContext.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.286</Modified>
+      <Modified>2015-09-28T06:42:58.491</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Collections.Concurrent.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Collections.Concurrent.dll">
       <PackagePath>System.Collections.Concurrent.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.661</Modified>
+      <Modified>2015-09-28T06:42:58.553</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Collections.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.696</Modified>
+      <Modified>2015-09-28T06:42:58.775</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Collections.Immutable.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Collections.Immutable.dll">
       <PackagePath>System.Collections.Immutable.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.662</Modified>
+      <Modified>2015-09-28T06:42:58.574</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Collections.NonGeneric.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Collections.NonGeneric.dll">
       <PackagePath>System.Collections.NonGeneric.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.425</Modified>
+      <Modified>2015-09-28T06:43:08.488</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Collections.Specialized.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Collections.Specialized.dll">
       <PackagePath>System.Collections.Specialized.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.741</Modified>
+      <Modified>2015-09-28T06:42:53.565</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ComponentModel.Annotations.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ComponentModel.Annotations.dll">
       <PackagePath>System.ComponentModel.Annotations.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.380</Modified>
+      <Modified>2015-09-28T06:42:58.805</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ComponentModel.DataAnnotations.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ComponentModel.DataAnnotations.dll">
       <PackagePath>System.ComponentModel.DataAnnotations.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.788</Modified>
+      <Modified>2015-09-28T06:42:51.130</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ComponentModel.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ComponentModel.dll">
       <PackagePath>System.ComponentModel.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.364</Modified>
+      <Modified>2015-09-28T06:42:58.609</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ComponentModel.EventBasedAsync.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ComponentModel.EventBasedAsync.dll">
       <PackagePath>System.ComponentModel.EventBasedAsync.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.757</Modified>
+      <Modified>2015-09-28T06:42:50.971</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Core.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Core.dll">
       <PackagePath>System.Core.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.804</Modified>
+      <Modified>2015-09-28T06:42:51.136</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Data.Common.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Data.Common.dll">
       <PackagePath>System.Data.Common.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.918</Modified>
+      <Modified>2015-09-28T06:42:51.244</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Diagnostics.Contracts.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Diagnostics.Contracts.dll">
       <PackagePath>System.Diagnostics.Contracts.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.835</Modified>
+      <Modified>2015-09-28T06:42:51.241</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Diagnostics.Debug.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Diagnostics.Debug.dll">
       <PackagePath>System.Diagnostics.Debug.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.349</Modified>
+      <Modified>2015-09-28T06:42:58.764</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Diagnostics.StackTrace.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Diagnostics.StackTrace.dll">
       <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.132</Modified>
+      <Modified>2015-09-28T06:42:52.329</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Diagnostics.Tools.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Diagnostics.Tools.dll">
       <PackagePath>System.Diagnostics.Tools.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.411</Modified>
+      <Modified>2015-09-28T06:42:58.824</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Diagnostics.Tracing.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Diagnostics.Tracing.dll">
       <PackagePath>System.Diagnostics.Tracing.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.364</Modified>
+      <Modified>2015-09-28T06:42:58.874</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.dll">
       <PackagePath>System.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.804</Modified>
+      <Modified>2015-09-28T06:42:51.193</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Dynamic.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Dynamic.Runtime.dll">
       <PackagePath>System.Dynamic.Runtime.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.572</Modified>
+      <Modified>2015-09-28T06:42:58.977</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Globalization.Calendars.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Globalization.Calendars.dll">
       <PackagePath>System.Globalization.Calendars.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.673</Modified>
+      <Modified>2015-09-28T06:42:58.869</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Globalization.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Globalization.dll">
       <PackagePath>System.Globalization.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.853</Modified>
+      <Modified>2015-09-28T06:42:58.874</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Globalization.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Globalization.Extensions.dll">
       <PackagePath>System.Globalization.Extensions.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.732</Modified>
+      <Modified>2015-09-28T06:42:58.924</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.Compression.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.Compression.dll">
       <PackagePath>System.IO.Compression.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.780</Modified>
+      <Modified>2015-09-28T06:43:00.229</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.Compression.ZipFile.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.Compression.ZipFile.dll">
       <PackagePath>System.IO.Compression.ZipFile.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.869</Modified>
+      <Modified>2015-09-28T06:42:59.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.dll">
       <PackagePath>System.IO.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.785</Modified>
+      <Modified>2015-09-28T06:42:58.936</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.FileSystem.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.FileSystem.dll">
       <PackagePath>System.IO.FileSystem.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.059</Modified>
+      <Modified>2015-09-28T06:43:00.343</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.FileSystem.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.FileSystem.Primitives.dll">
       <PackagePath>System.IO.FileSystem.Primitives.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.144</Modified>
+      <Modified>2015-09-28T06:42:58.923</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.IsolatedStorage.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.IsolatedStorage.dll">
       <PackagePath>System.IO.IsolatedStorage.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.116</Modified>
+      <Modified>2015-09-28T06:42:53.754</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.UnmanagedMemoryStream.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.IO.UnmanagedMemoryStream.dll">
       <PackagePath>System.IO.UnmanagedMemoryStream.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.147</Modified>
+      <Modified>2015-09-28T06:42:59.656</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Linq.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Linq.dll">
       <PackagePath>System.Linq.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.189</Modified>
+      <Modified>2015-09-28T06:43:00.229</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Linq.Expressions.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Linq.Expressions.dll">
       <PackagePath>System.Linq.Expressions.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.252</Modified>
+      <Modified>2015-09-28T06:43:01.065</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Linq.Parallel.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Linq.Parallel.dll">
       <PackagePath>System.Linq.Parallel.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.267</Modified>
+      <Modified>2015-09-28T06:43:01.632</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Linq.Queryable.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Linq.Queryable.dll">
       <PackagePath>System.Linq.Queryable.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.149</Modified>
+      <Modified>2015-09-28T06:43:01.745</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.dll">
       <PackagePath>System.Net.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.804</Modified>
+      <Modified>2015-09-28T06:42:51.243</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.Http.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.205</Modified>
+      <Modified>2015-09-28T06:43:02.089</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.Http.Rtc.dll">
       <PackagePath>System.Net.Http.Rtc.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.881</Modified>
+      <Modified>2015-09-28T06:42:54.040</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.NetworkInformation.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.NetworkInformation.dll">
       <PackagePath>System.Net.NetworkInformation.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.061</Modified>
+      <Modified>2015-09-28T06:43:01.129</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.Primitives.dll">
       <PackagePath>System.Net.Primitives.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.105</Modified>
+      <Modified>2015-09-28T06:43:02.253</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.Requests.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.Requests.dll">
       <PackagePath>System.Net.Requests.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.706</Modified>
+      <Modified>2015-09-28T06:42:53.743</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.Sockets.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.Sockets.dll">
       <PackagePath>System.Net.Sockets.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.725</Modified>
+      <Modified>2015-09-28T06:42:53.899</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.WebHeaderCollection.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Net.WebHeaderCollection.dll">
       <PackagePath>System.Net.WebHeaderCollection.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.718</Modified>
+      <Modified>2015-09-28T06:42:54.388</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Numerics.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Numerics.dll">
       <PackagePath>System.Numerics.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.804</Modified>
+      <Modified>2015-09-28T06:42:51.248</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Numerics.Vectors.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Numerics.Vectors.dll">
       <PackagePath>System.Numerics.Vectors.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.236</Modified>
+      <Modified>2015-09-28T06:43:02.328</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Numerics.Vectors.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Numerics.Vectors.WindowsRuntime.dll">
       <PackagePath>System.Numerics.Vectors.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.653</Modified>
+      <Modified>2015-09-28T06:42:54.430</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ObjectModel.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ObjectModel.dll">
       <PackagePath>System.ObjectModel.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.149</Modified>
+      <Modified>2015-09-28T06:43:03.207</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Private.DataContractSerialization.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Private.DataContractSerialization.dll">
       <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.882</Modified>
+      <Modified>2015-09-28T06:42:51.109</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Private.Networking.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Private.Networking.dll">
       <PackagePath>System.Private.Networking.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.645</Modified>
+      <Modified>2015-09-28T06:43:09.089</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Private.ServiceModel.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Private.ServiceModel.dll">
       <PackagePath>System.Private.ServiceModel.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.030</Modified>
+      <Modified>2015-09-28T06:42:51.190</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Private.Uri.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Private.Uri.dll">
       <PackagePath>System.Private.Uri.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.418</Modified>
+      <Modified>2015-09-28T06:42:50.580</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Context.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Context.dll">
       <PackagePath>System.Reflection.Context.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.725</Modified>
+      <Modified>2015-09-28T06:42:54.790</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.DispatchProxy.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.DispatchProxy.dll">
       <PackagePath>System.Reflection.DispatchProxy.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.252</Modified>
+      <Modified>2015-09-28T06:43:03.388</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.dll">
       <PackagePath>System.Reflection.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.236</Modified>
+      <Modified>2015-09-28T06:43:03.370</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Emit.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Emit.dll">
       <PackagePath>System.Reflection.Emit.dll</PackagePath>
-      <Modified>2015-11-25T23:23:05.234</Modified>
+      <Modified>2015-09-28T06:43:17.246</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Emit.ILGeneration.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Emit.ILGeneration.dll">
       <PackagePath>System.Reflection.Emit.ILGeneration.dll</PackagePath>
-      <Modified>2015-11-25T23:23:05.234</Modified>
+      <Modified>2015-09-28T06:43:16.261</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Emit.Lightweight.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Emit.Lightweight.dll">
       <PackagePath>System.Reflection.Emit.Lightweight.dll</PackagePath>
-      <Modified>2015-11-25T23:23:05.260</Modified>
+      <Modified>2015-09-28T06:43:16.658</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Extensions.dll">
       <PackagePath>System.Reflection.Extensions.dll</PackagePath>
-      <Modified>2015-11-25T23:23:02.361</Modified>
+      <Modified>2015-09-28T06:43:04.202</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Metadata.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Metadata.dll">
       <PackagePath>System.Reflection.Metadata.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.358</Modified>
+      <Modified>2015-09-28T06:43:04.237</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.Primitives.dll">
       <PackagePath>System.Reflection.Primitives.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.651</Modified>
+      <Modified>2015-09-28T06:43:04.222</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.TypeExtensions.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Reflection.TypeExtensions.dll">
       <PackagePath>System.Reflection.TypeExtensions.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.425</Modified>
+      <Modified>2015-09-28T06:43:04.868</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Resources.ResourceManager.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Resources.ResourceManager.dll">
       <PackagePath>System.Resources.ResourceManager.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.652</Modified>
+      <Modified>2015-09-28T06:43:04.909</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
-      <Modified>2015-11-25T23:23:04.461</Modified>
+      <Modified>2015-09-28T06:43:09.518</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Extensions.dll">
       <PackagePath>System.Runtime.Extensions.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.554</Modified>
+      <Modified>2015-09-28T06:43:05.708</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Handles.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Handles.dll">
       <PackagePath>System.Runtime.Handles.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.795</Modified>
+      <Modified>2015-09-28T06:43:05.830</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.InteropServices.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.InteropServices.dll">
       <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.844</Modified>
+      <Modified>2015-09-28T06:43:05.919</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.InteropServices.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.InteropServices.WindowsRuntime.dll">
       <PackagePath>System.Runtime.InteropServices.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.756</Modified>
+      <Modified>2015-09-28T06:42:54.595</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Numerics.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Numerics.dll">
       <PackagePath>System.Runtime.Numerics.dll</PackagePath>
-      <Modified>2015-11-25T23:23:04.022</Modified>
+      <Modified>2015-09-28T06:43:09.736</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Serialization.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Serialization.dll">
       <PackagePath>System.Runtime.Serialization.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.804</Modified>
+      <Modified>2015-09-28T06:42:51.261</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Serialization.Json.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Serialization.Json.dll">
       <PackagePath>System.Runtime.Serialization.Json.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.772</Modified>
+      <Modified>2015-09-28T06:42:55.239</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Serialization.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Serialization.Primitives.dll">
       <PackagePath>System.Runtime.Serialization.Primitives.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.711</Modified>
+      <Modified>2015-09-28T06:42:55.377</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Serialization.Xml.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.Serialization.Xml.dll">
       <PackagePath>System.Runtime.Serialization.Xml.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.881</Modified>
+      <Modified>2015-09-28T06:42:55.294</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.dll">
       <PackagePath>System.Runtime.WindowsRuntime.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.014</Modified>
+      <Modified>2015-09-28T06:42:55.472</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.UI.Xaml.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Runtime.WindowsRuntime.UI.Xaml.dll">
       <PackagePath>System.Runtime.WindowsRuntime.UI.Xaml.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.013</Modified>
+      <Modified>2015-09-28T06:42:55.345</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Security.Claims.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Security.Claims.dll">
       <PackagePath>System.Security.Claims.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.799</Modified>
+      <Modified>2015-09-28T06:43:09.548</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Security.Principal.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Security.Principal.dll">
       <PackagePath>System.Security.Principal.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.616</Modified>
+      <Modified>2015-09-28T06:43:09.800</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.dll">
       <PackagePath>System.ServiceModel.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.804</Modified>
+      <Modified>2015-09-28T06:42:51.287</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.Duplex.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.Duplex.dll">
       <PackagePath>System.ServiceModel.Duplex.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.881</Modified>
+      <Modified>2015-09-28T06:42:56.249</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.Http.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.Http.dll">
       <PackagePath>System.ServiceModel.Http.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.941</Modified>
+      <Modified>2015-09-28T06:42:55.615</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.NetTcp.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.NetTcp.dll">
       <PackagePath>System.ServiceModel.NetTcp.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.956</Modified>
+      <Modified>2015-09-28T06:42:56.249</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.Primitives.dll">
       <PackagePath>System.ServiceModel.Primitives.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.255</Modified>
+      <Modified>2015-09-28T06:42:56.524</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.Security.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.Security.dll">
       <PackagePath>System.ServiceModel.Security.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.109</Modified>
+      <Modified>2015-09-28T06:42:56.160</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.Web.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.ServiceModel.Web.dll">
       <PackagePath>System.ServiceModel.Web.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.820</Modified>
+      <Modified>2015-09-28T06:42:51.477</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.302</Modified>
+      <Modified>2015-09-28T06:42:57.973</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Text.Encoding.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Text.Encoding.dll">
       <PackagePath>System.Text.Encoding.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.732</Modified>
+      <Modified>2015-09-28T06:43:09.072</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Text.Encoding.Extensions.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Text.Encoding.Extensions.dll">
       <PackagePath>System.Text.Encoding.Extensions.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.687</Modified>
+      <Modified>2015-09-28T06:43:09.495</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Text.RegularExpressions.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Text.RegularExpressions.dll">
       <PackagePath>System.Text.RegularExpressions.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.881</Modified>
+      <Modified>2015-09-28T06:43:09.502</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.dll">
       <PackagePath>System.Threading.dll</PackagePath>
-      <Modified>2015-11-25T23:23:04.089</Modified>
+      <Modified>2015-09-28T06:43:09.519</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.Overlapped.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.Overlapped.dll">
       <PackagePath>System.Threading.Overlapped.dll</PackagePath>
-      <Modified>2015-11-25T23:23:00.450</Modified>
+      <Modified>2015-09-28T06:42:50.570</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.Tasks.Dataflow.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.Tasks.Dataflow.dll">
       <PackagePath>System.Threading.Tasks.Dataflow.dll</PackagePath>
-      <Modified>2015-11-25T23:23:04.306</Modified>
+      <Modified>2015-09-28T06:43:09.532</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.Tasks.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.Tasks.dll">
       <PackagePath>System.Threading.Tasks.dll</PackagePath>
-      <Modified>2015-11-25T23:23:04.039</Modified>
+      <Modified>2015-09-28T06:43:09.503</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.Tasks.Parallel.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.Tasks.Parallel.dll">
       <PackagePath>System.Threading.Tasks.Parallel.dll</PackagePath>
-      <Modified>2015-11-25T23:23:03.878</Modified>
+      <Modified>2015-09-28T06:43:10.927</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.Timer.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Threading.Timer.dll">
       <PackagePath>System.Threading.Timer.dll</PackagePath>
-      <Modified>2015-11-25T23:23:04.029</Modified>
+      <Modified>2015-09-28T06:43:10.524</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Windows.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Windows.dll">
       <PackagePath>System.Windows.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.835</Modified>
+      <Modified>2015-09-28T06:42:51.785</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.dll">
       <PackagePath>System.Xml.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.866</Modified>
+      <Modified>2015-09-28T06:42:51.867</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.Linq.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.Linq.dll">
       <PackagePath>System.Xml.Linq.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.866</Modified>
+      <Modified>2015-09-28T06:42:51.931</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.ReaderWriter.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.ReaderWriter.dll">
       <PackagePath>System.Xml.ReaderWriter.dll</PackagePath>
-      <Modified>2015-11-25T23:23:04.393</Modified>
+      <Modified>2015-09-28T06:43:12.251</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.Serialization.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.Serialization.dll">
       <PackagePath>System.Xml.Serialization.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.929</Modified>
+      <Modified>2015-09-28T06:42:51.979</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.XDocument.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.XDocument.dll">
       <PackagePath>System.Xml.XDocument.dll</PackagePath>
-      <Modified>2015-11-25T23:23:04.278</Modified>
+      <Modified>2015-09-28T06:43:12.233</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.XmlDocument.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.XmlDocument.dll">
       <PackagePath>System.Xml.XmlDocument.dll</PackagePath>
-      <Modified>2015-11-25T23:22:59.882</Modified>
+      <Modified>2015-09-28T06:42:50.597</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.XmlSerializer.dll">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
-      <Modified>2015-11-25T23:23:01.509</Modified>
+      <Modified>2015-09-28T06:42:57.973</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\UWPDiplomaOptions.exe">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\UWPDiplomaOptions.exe">
       <PackagePath>UWPDiplomaOptions.exe</PackagePath>
-      <Modified>2015-11-30T02:03:34.781</Modified>
+      <Modified>2015-12-03T01:17:02.583</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\UWPDiplomaOptions.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\UWPDiplomaOptions.xr.xml">
       <PackagePath>UWPDiplomaOptions.xr.xml</PackagePath>
-      <Modified>2015-11-30T02:02:11.272</Modified>
+      <Modified>2015-12-03T00:05:34.572</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\WinMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
-      <Modified>2015-11-25T23:02:19.110</Modified>
+      <Modified>2015-11-06T04:31:20.351</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\WinRTXamlToolkit.Controls.DataVisualization.dll">
+      <PackagePath>WinRTXamlToolkit.Controls.DataVisualization.dll</PackagePath>
+      <Modified>2015-12-02T19:03:35.214</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\WinRTXamlToolkit.Controls.DataVisualization\Properties\WinRTXamlToolkit.Controls.DataVisualization.UWP.rd.xml">
+      <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\Properties\WinRTXamlToolkit.Controls.DataVisualization.UWP.rd.xml</PackagePath>
+      <Modified>2015-12-02T19:03:35.594</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\WinRTXamlToolkit.Controls.DataVisualization\WinRTXamlToolkit.Controls.DataVisualization.xr.xml">
+      <PackagePath>WinRTXamlToolkit.Controls.DataVisualization\WinRTXamlToolkit.Controls.DataVisualization.xr.xml</PackagePath>
+      <Modified>2015-12-02T19:03:35.223</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\WinRTXamlToolkit.dll">
+      <PackagePath>WinRTXamlToolkit.dll</PackagePath>
+      <Modified>2015-12-02T19:03:35.259</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\WinRTXamlToolkit\Properties\WinRTXamlToolkit.UWP.rd.xml">
+      <PackagePath>WinRTXamlToolkit\Properties\WinRTXamlToolkit.UWP.rd.xml</PackagePath>
+      <Modified>2015-12-02T19:03:35.838</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Shane\Desktop\UWPDiplomaOptions\UWPDiplomaOptions\bin\x86\Debug\Core\WinRTXamlToolkit\WinRTXamlToolkit.xr.xml">
+      <PackagePath>WinRTXamlToolkit\WinRTXamlToolkit.xr.xml</PackagePath>
+      <Modified>2015-12-02T19:03:35.314</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
