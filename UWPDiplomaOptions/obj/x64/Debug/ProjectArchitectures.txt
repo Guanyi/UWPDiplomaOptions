@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-C:\Users\Shane\Desktop\UWPDiplomaOptions-master\UWPDiplomaOptions\UWPDiplomaOptions.csproj;x64
-=======
-C:\Users\Guanyi\Documents\Visual Studio 2015\Projects\UWPDiplomaOptions\UWPDiplomaOptions\UWPDiplomaOptions.csproj;x64
->>>>>>> c9c33172a8f1f2297da6e3e0e17f1fa7c4916895
