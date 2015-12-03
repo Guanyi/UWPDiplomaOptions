@@ -55,6 +55,39 @@ namespace UWPDiplomaOptions.Models
             }
         }
 
+        public static async Task GetActiveOptions(ObservableCollection<Option> OptionsList)
+        {
+            var response = await http.GetAsync("http://uwproject.feifei.ca/api/Options");
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadAsStringAsync();
+                JsonValue value = JsonValue.Parse(result);
+                JsonArray root = value.GetArray();
+                for (uint i = 0; i < root.Count; i++)
+                {
+                    int optionId = (int)root.GetObjectAt(i).GetNamedNumber("OptionId");
+                    string title = root.GetObjectAt(i).GetNamedString("Title");
+                    bool isActive = root.GetObjectAt(i).GetNamedBoolean("IsActive");
+
+                    if (isActive == true)
+                    {
+                        var option = new Option
+                        {
+                            OptionId = optionId,
+                            Title = title,
+                            IsActive = isActive,
+                        };
+                        OptionsList.Add(option);
+                    }
+                }
+            }
+            else
+            {
+                var dialog = new Windows.UI.Popups.MessageDialog("Cannot retrieve any record");
+                await dialog.ShowAsync();
+            }
+        }
+
         public static async Task AddOption(StringContent optionJson, ObservableCollection<Option> OptionsList)
         {
             //var http = new HttpClient();
@@ -73,6 +106,8 @@ namespace UWPDiplomaOptions.Models
                 await dialog.ShowAsync();
             }
         }
+
+
 
         public static async Task EditOption(StringContent optionJsonToBeEdited, Option updatedOption, ObservableCollection<Option> OptionsList)
         {

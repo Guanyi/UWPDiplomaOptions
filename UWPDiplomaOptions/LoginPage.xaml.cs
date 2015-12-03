@@ -71,7 +71,6 @@ namespace UWPDiplomaOptions
                     var jObject = JsonObject.Parse(result);
                     string token = jObject.GetNamedString("access_token");
 
-<<<<<<< HEAD
                     obj.AccessToken = token;
                     UserManager.http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", obj.AccessToken);
 
@@ -82,6 +81,8 @@ namespace UWPDiplomaOptions
                         if (userLogin.UserName == loginName)
                         {
                             obj.roleToken = userLogin.RoleName;
+                            obj.currentId = userLogin.Id;
+                            obj.studentNumber = userLogin.UserName;
                         }
                     }
 
@@ -93,12 +94,6 @@ namespace UWPDiplomaOptions
                     {
                         Frame.Navigate(typeof(ManageChoicePage));
                     }
-=======
-                    var obj = App.Current as App;
-                    obj.AccessToken = token;
-
-                    Frame.Navigate(typeof(HomePage));
->>>>>>> c9c33172a8f1f2297da6e3e0e17f1fa7c4916895
                 }
                 else
                 {

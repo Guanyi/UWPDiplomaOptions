@@ -76,16 +76,14 @@ namespace UWPDiplomaOptions.Models
             
         }
 
-        public static async Task AddChoice(StringContent choiceJson, ObservableCollection<Choice> ChoicesList)
+        public static async Task AddChoice(StringContent choiceJson)
         {
-            var response = await http.PostAsync("http://uwproject.feifei.ca/api/Choices", choiceJson);
+            var response = await http.PostAsync("http://uwproject.feifei.ca/api/Choices/", choiceJson);
 
             if (response.IsSuccessStatusCode)
             {
-                var result = await response.Content.ReadAsStringAsync();
-                JsonValue value = JsonValue.Parse(result);
-                Choice choice = JsonConvert.DeserializeObject<Choice>(value.ToString());
-                ChoicesList.Add(choice);
+                var dialog = new Windows.UI.Popups.MessageDialog("Saved your Choices!");
+                await dialog.ShowAsync();
             }
             else
             {
@@ -93,6 +91,7 @@ namespace UWPDiplomaOptions.Models
                 await dialog.ShowAsync();
             }
         }
+
 
         public static async Task DeleteChoice(string idToBeDeleted, ObservableCollection<Choice> ChoicesList)
         {

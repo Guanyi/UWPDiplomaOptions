@@ -1,30 +1,30 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="UWPDiplomaOptions.HomePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:UWPDiplomaOptions"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"                       >
 
     <Grid Background="#0078D7">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock x:ConnectionId='1' Margin="0, 0, 0, 50" x:Name="TitleBlock" TextWrapping="Wrap" Text="Create Choice Record" TextAlignment="Center" Foreground="White" FontSize="64"/>
-            <TextBlock x:ConnectionId='2' x:Name="StudentNumberBlock" TextWrapping="Wrap" Text="Student Number" TextAlignment="Center" Foreground="White"/>
-            <TextBox x:ConnectionId='3' x:Name="StudentNumberBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
-            <TextBlock x:ConnectionId='4' x:Name="FirstNameBlock" TextWrapping="Wrap" Text="First Name" TextAlignment="Center" Foreground="White"/>
-            <TextBox x:ConnectionId='5' x:Name="FirstNameBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
-            <TextBlock x:ConnectionId='6' x:Name="LastNameBlock" TextWrapping="Wrap" Text="Last Name" TextAlignment="Center" Foreground="White"/>
-            <TextBox x:ConnectionId='7' x:Name="LastNameBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
-            <TextBlock x:ConnectionId='8' x:Name="Choice1Block" TextWrapping="Wrap" Text="First Choice" TextAlignment="Center" Foreground="White"/>
-            <ComboBox x:ConnectionId='9' x:Name="Choice1ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
-            <TextBlock x:ConnectionId='10' x:Name="Choice2Block" TextWrapping="Wrap" Text="Second Choice" TextAlignment="Center" Foreground="White"/>
-            <ComboBox x:ConnectionId='11' x:Name="Choice2ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
-            <TextBlock x:ConnectionId='12' x:Name="Choice3Block" TextWrapping="Wrap" Text="Third Choice" TextAlignment="Center" Foreground="White"/>
-            <ComboBox x:ConnectionId='13' x:Name="Choice3ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
-            <TextBlock x:ConnectionId='14' x:Name="Choice4Block" TextWrapping="Wrap" Text="Fourth Choice" TextAlignment="Center" Foreground="White"/>
-            <ComboBox x:ConnectionId='15' x:Name="Choice4ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
-            <HyperlinkButton x:ConnectionId='16' Margin="10" x:Name="CreateButton" Content="Create" HorizontalAlignment="Center" Width="200" VerticalAlignment="Stretch" Background="White"                           />
+            <TextBlock x:ConnectionId='2' Margin="0, 0, 0, 50" x:Name="TitleBlock" TextWrapping="Wrap" Text="Create Choice Record" TextAlignment="Center" Foreground="White" FontSize="64" />
+            <TextBlock x:ConnectionId='3' x:Name="StudentNumberBlock" TextWrapping="Wrap" Text="Student Number" TextAlignment="Center" Foreground="White" />
+            <TextBox x:ConnectionId='4' x:Name="StudentNumberBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200" IsReadOnly="true"/>
+            <TextBlock x:ConnectionId='5' x:Name="FirstNameBlock" TextWrapping="Wrap" Text="First Name" TextAlignment="Center" Foreground="White"/>
+            <TextBox x:ConnectionId='6' x:Name="FirstNameBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
+            <TextBlock x:ConnectionId='7' x:Name="LastNameBlock" TextWrapping="Wrap" Text="Last Name" TextAlignment="Center" Foreground="White"/>
+            <TextBox x:ConnectionId='8' x:Name="LastNameBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
+            <TextBlock x:ConnectionId='9' x:Name="Choice1Block" TextWrapping="Wrap" Text="First Choice" TextAlignment="Center" Foreground="White"/>
+            <ComboBox x:ConnectionId='10'  ItemsSource="{Binding}"  SelectedItem="--" DisplayMemberPath="Title" SelectedValuePath="OptionId" x:Name="Choice1ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
+            <TextBlock x:ConnectionId='11' x:Name="Choice2Block" TextWrapping="Wrap" Text="Second Choice" TextAlignment="Center" Foreground="White"/>
+            <ComboBox x:ConnectionId='12'  ItemsSource="{Binding}"  SelectedItem="--" DisplayMemberPath="Title" SelectedValuePath="OptionId" x:Name="Choice2ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
+            <TextBlock x:ConnectionId='13' x:Name="Choice3Block" TextWrapping="Wrap" Text="Third Choice" TextAlignment="Center" Foreground="White"/>
+            <ComboBox x:ConnectionId='14'  ItemsSource="{Binding}"  SelectedItem="--" DisplayMemberPath="Title" SelectedValuePath="OptionId" x:Name="Choice3ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
+            <TextBlock x:ConnectionId='15' x:Name="Choice4Block" TextWrapping="Wrap" Text="Fourth Choice" TextAlignment="Center" Foreground="White"/>
+            <ComboBox x:ConnectionId='16'  ItemsSource="{Binding}"   SelectedItem="--" DisplayMemberPath="Title" SelectedValuePath="OptionId" x:Name="Choice4ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
+            <HyperlinkButton x:ConnectionId='17' Margin="10" x:Name="CreateButton" Content="Create" HorizontalAlignment="Center" Width="200" VerticalAlignment="Stretch" Background="White"                           />
         </StackPanel>
     </Grid>
 </Page>

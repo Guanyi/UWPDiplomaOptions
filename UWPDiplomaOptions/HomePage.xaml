@@ -5,25 +5,25 @@
     xmlns:local="using:UWPDiplomaOptions"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loading="Page_Loading">
 
     <Grid Background="#0078D7">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Margin="0, 0, 0, 50" x:Name="TitleBlock" TextWrapping="Wrap" Text="Create Choice Record" TextAlignment="Center" Foreground="White" FontSize="64"/>
-            <TextBlock x:Name="StudentNumberBlock" TextWrapping="Wrap" Text="Student Number" TextAlignment="Center" Foreground="White"/>
-            <TextBox x:Name="StudentNumberBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
+            <TextBlock Margin="0, 0, 0, 50" x:Name="TitleBlock" TextWrapping="Wrap" Text="Create Choice Record" TextAlignment="Center" Foreground="White" FontSize="64" />
+            <TextBlock x:Name="StudentNumberBlock" TextWrapping="Wrap" Text="Student Number" TextAlignment="Center" Foreground="White" />
+            <TextBox x:Name="StudentNumberBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200" IsReadOnly="true"/>
             <TextBlock x:Name="FirstNameBlock" TextWrapping="Wrap" Text="First Name" TextAlignment="Center" Foreground="White"/>
             <TextBox x:Name="FirstNameBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
             <TextBlock x:Name="LastNameBlock" TextWrapping="Wrap" Text="Last Name" TextAlignment="Center" Foreground="White"/>
             <TextBox x:Name="LastNameBox" TextWrapping="Wrap" Text="" TextAlignment="Center" Width="200"/>
             <TextBlock x:Name="Choice1Block" TextWrapping="Wrap" Text="First Choice" TextAlignment="Center" Foreground="White"/>
-            <ComboBox x:Name="Choice1ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
+            <ComboBox  ItemsSource="{Binding}"  SelectedItem="--" DisplayMemberPath="Title" SelectedValuePath="OptionId" x:Name="Choice1ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
             <TextBlock x:Name="Choice2Block" TextWrapping="Wrap" Text="Second Choice" TextAlignment="Center" Foreground="White"/>
-            <ComboBox x:Name="Choice2ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
+            <ComboBox  ItemsSource="{Binding}"  SelectedItem="--" DisplayMemberPath="Title" SelectedValuePath="OptionId" x:Name="Choice2ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
             <TextBlock x:Name="Choice3Block" TextWrapping="Wrap" Text="Third Choice" TextAlignment="Center" Foreground="White"/>
-            <ComboBox x:Name="Choice3ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
+            <ComboBox  ItemsSource="{Binding}"  SelectedItem="--" DisplayMemberPath="Title" SelectedValuePath="OptionId" x:Name="Choice3ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
             <TextBlock x:Name="Choice4Block" TextWrapping="Wrap" Text="Fourth Choice" TextAlignment="Center" Foreground="White"/>
-            <ComboBox x:Name="Choice4ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
+            <ComboBox  ItemsSource="{Binding}"   SelectedItem="--" DisplayMemberPath="Title" SelectedValuePath="OptionId" x:Name="Choice4ComboBox" HorizontalAlignment="Center" VerticalAlignment="Stretch" Width="200"/>
             <HyperlinkButton Margin="10" x:Name="CreateButton" Content="Create" HorizontalAlignment="Center" Width="200" VerticalAlignment="Stretch" Background="White" Click="CreateButton_Click"/>
         </StackPanel>
     </Grid>
