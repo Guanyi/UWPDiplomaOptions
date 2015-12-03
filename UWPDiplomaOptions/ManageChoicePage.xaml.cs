@@ -59,6 +59,7 @@ namespace UWPDiplomaOptions
             var button = (Button)sender;
             string id = button.Tag.ToString();
             await ChoiceManager.DeleteChoice(id, Choices);
+            Frame.Navigate(typeof(ManageChoicePage));
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -98,6 +99,7 @@ namespace UWPDiplomaOptions
                 var obj = new { ChoiceId = id, StudentId = studentId, StudentFirstName = fName, StudentLastName = lName, FirstChoiceOptionId = firstChoice, SecondChoiceOptionId = secondChoice, ThirdChoiceOptionId = thirdChoice, FourthChoiceOptionId = fourthChoice, YearTermId = yearTerm, SelectionDate = selectionDate };
 
                 await ChoiceManager.EditChoice(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), choice, Choices);
+                Frame.Navigate(typeof(ManageChoicePage));
             }
         }
 

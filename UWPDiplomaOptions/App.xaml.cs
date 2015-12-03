@@ -24,8 +24,11 @@ namespace UWPDiplomaOptions
     {
         public string AccessToken { get; set; }
         public string roleToken { get; set; }
+<<<<<<< HEAD
         public string currentId { get; set; }
         public string studentNumber { get; set; }
+=======
+>>>>>>> db97799eb01164d6c9876c4594763d4e4df3c422
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().

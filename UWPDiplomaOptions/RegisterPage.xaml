@@ -5,7 +5,7 @@
     xmlns:local="using:UWPDiplomaOptions"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loading="Page_Loading">
 
     <Grid Background="#0078D7">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -19,7 +19,10 @@
             <PasswordBox x:Name="PasswordBox" Width="200"/>
             <TextBlock x:Name="ConfirmPasswordBlock" TextWrapping="Wrap" Text="Confirm Password" TextAlignment="Center" Foreground="White"/>
             <PasswordBox x:Name="ConfirmPasswordBox" Width="200"/>
-            <HyperlinkButton Margin="10" x:Name="RegisterButton" Content="Register" HorizontalAlignment="Center" Width="200" VerticalAlignment="Stretch" Background="White" Click="RegisterButton_Click"/>
+            <StackPanel Orientation="Horizontal" Width="200">
+                <HyperlinkButton Margin="0, 10, 0, 10" x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Center" Width="100" VerticalAlignment="Stretch" Background="White" Click="CancelButton_Click"/>
+                <HyperlinkButton Margin="10" x:Name="RegisterButton" Content="Register" HorizontalAlignment="Center" Width="90" VerticalAlignment="Stretch" Background="White" Click="RegisterButton_Click"/>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

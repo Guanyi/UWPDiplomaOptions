@@ -38,17 +38,53 @@ namespace UWPDiplomaOptions
         private async void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
             int invalid = 0;
-            if (!Regex.IsMatch(StudentNumberBox.Text, @"^[A-a][0][0][0-9]{6}$"))
+            if (!Regex.IsMatch(StudentNumberBox.Text, @"^[A][0][0][0-9]{6}$"))
             {
                 invalid = 1;
+                var dialog = new Windows.UI.Popups.MessageDialog("Student Number is Invalid");
+                await dialog.ShowAsync();
+            }
+            else if(EmailBox.Text == "")
+            {
+                invalid = 1;
+                var dialog = new Windows.UI.Popups.MessageDialog("Email is Invalid\nExample: a@a.ca");
+                await dialog.ShowAsync();
+            }
+            else if (!Regex.IsMatch(PasswordBox.Password, @"^((?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{4,})"))
+            {
+                invalid = 1;
+                var dialog = new Windows.UI.Popups.MessageDialog("Password is Invalid\nProper Format: Minimum 4 characters with at least 1 Uppercase Alphabet, 1 Lowercase Alphabet, 1 Number and 1 Special Character");
+                await dialog.ShowAsync();
+            }
+            else if(PasswordBox.Password != ConfirmPasswordBox.Password)
+            {
+                invalid = 1;
+                var dialog = new Windows.UI.Popups.MessageDialog("Passwords Do Not Match");
+                await dialog.ShowAsync();
             }
             if (invalid != 1)
             {
                 if(StudentNumberBox.Text != "" && EmailBox.Text != "" && PasswordBox.Password != "" && ConfirmPasswordBox.Password != "")
                 {
-                    var obj = new { UserName = StudentNumberBox.Text, Email = EmailBox.Text, Password = PasswordBox.Password, ConfirmPassword = ConfirmPasswordBox.Password };
-                    await UserManager.AddUser(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), UserList);
-                    Frame.Navigate(typeof(LoginPage));
+                    foreach(var userLogin in UserList)
+                    {
+                        if(userLogin.UserName == StudentNumberBox.Text)
+                        {
+                            invalid = 2;
+                            break;
+                        }
+                    }
+                    if(invalid == 2)
+                    {
+                        var dialog = new Windows.UI.Popups.MessageDialog("Sorry! User already exists!");
+                        await dialog.ShowAsync();
+                    }
+                    else
+                    {
+                        var obj = new { UserName = StudentNumberBox.Text, Email = EmailBox.Text, Password = PasswordBox.Password, ConfirmPassword = ConfirmPasswordBox.Password };
+                        await UserManager.AddUser(new StringContent(JsonConvert.SerializeObject(obj), Encoding.UTF8, "application/json"), UserList);
+                        Frame.Navigate(typeof(LoginPage));
+                    }
                 }
             }
         }
@@ -56,6 +92,11 @@ namespace UWPDiplomaOptions
         private async void Page_Loading(FrameworkElement sender, object args)
         {
             await UserManager.GetUsers(UserList);
+        }
+
+        private void CancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LoginPage));
         }
     }
 }
